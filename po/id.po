@@ -25,16 +25,16 @@ msgstr "Nino"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:8
 #: data/com.github.torikulhabib.nino.desktop.in.in:4
-msgid "A network monitor widget."
-msgstr "Sebuah wijet monitor jaringan."
+msgid "A network monitor widget"
+msgstr "Sebuah wijet monitor jaringan"
 
 #: data/com.github.torikulhabib.nino.desktop.in.in:5
 msgid "Network Monitor"
 msgstr "Monitor Jaringan"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "A internet speed monitor aplication with a simple appearance."
-msgstr "Aplikasi monitor kecepatan internet dengan tampilan sederhana."
+msgid "A internet speed monitor apps."
+msgstr "Aplikasi monitor kecepatan internet."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:11
 msgid "Features:"

@@ -21,11 +21,11 @@ namespace nino {
 
     public class Constants {
         public abstract const string ID = "com.github.torikulhabib.nino";
-        public abstract const string VERSION = "1.0.0";
+        public abstract const string VERSION = "1.0.1";
         public abstract const string PROGRAME_NAME = "nino";
         public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.torikulhabib.nino";
-        public abstract const string ABOUT_COMMENTS = "A Widget Network Speeed ";
+        public abstract const string ABOUT_COMMENTS = "A Widget Network Speeed";
         public abstract const string TRANSLATOR_CREDITS = "Translators";
         public abstract const string MAIN_URL = "https://github.com/torikulhabib/nino";
         public abstract const string BUG_URL = "https://github.com/torikulhabib/nino/issues";

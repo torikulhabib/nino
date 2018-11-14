@@ -5,9 +5,9 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Nino</name>
-  <summary>A network monitor widget.</summary>
+  <summary>A network monitor widget</summary>
   <description>
-    <p>A internet speed monitor aplication with a simple appearance.</p>
+    <p>A internet speed monitor apps.</p>
     <p>Features:</p>
     <ul>
       <li>Small window application features.</li>
@@ -20,7 +20,7 @@
     <p></p>
   </description>
   ​<releases>
-    <release version="1.0.0" date="2018-11-07">
+    <release version="1.0.1" date="2018-11-07">
       <description>
         <p>Hello Juno!</p>
       </description>
@@ -69,11 +69,10 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  <developer_name>torikulhabib</developer_name>
-  <url type="homepage"></url>
+  <developer_name>torikul habib</developer_name>
+  <url type="homepage">https://github.com/torikulhabib/nino</url>
   <url type="bugtracker">https://github.com/torikulhabib/nino/issues</url>
-  <url type="help">https://github.com/torikulhabib/nino/issues</url>
-  <update_contact>torik.habib@gmail.com</update_contact>
+  <url type="translate">https://github.com/torikulhabib/nino/tree/master/po</url>
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#d1ff82</value>

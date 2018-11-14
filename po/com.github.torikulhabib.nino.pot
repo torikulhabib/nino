@@ -24,7 +24,7 @@ msgstr ""
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:8
 #: data/com.github.torikulhabib.nino.desktop.in.in:4
-msgid "A network monitor widget."
+msgid "A network monitor widget"
 msgstr ""
 
 #: data/com.github.torikulhabib.nino.desktop.in.in:5
@@ -32,7 +32,7 @@ msgid "Network Monitor"
 msgstr ""
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "A internet speed monitor aplication with a simple appearance."
+msgid "A internet speed monitor apps."
 msgstr ""
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:11
