@@ -1,0 +1,38 @@
+/*
+* Copyright (C) 2018  Carlos Lopez <calo_lrc@hotmail.com>
+* Copyright (C) 2018  Torikul habib <torik.habib@gmail.com>
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+* 
+* You should have received a copy of the GNU Affero General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* 
+*/
+
+@define-color nino_white #FAFAFA;
+@define-color nino_black #1A1A1A;
+@define-color nino_red #C6262E;
+@define-color nino_pink #db36a4;
+@define-color nino_orange #F37329;
+@define-color nino_yellow #F9C440;
+@define-color nino_green #68B723;
+@define-color nino_teal #018B7F;
+@define-color nino_blue #3689E6;
+@define-color nino_purple #7239b3;
+@define-color nino_coco #715344;
+
+@define-color white_clear #FFFFFF;
+@define-color black_dark #000000;
+
+/* @define-color nino_gradient_blue_green linear-gradient(to right, #00F160, #0575E4);
+@define-color nino_gradient_purple_red linear-gradient(to right, #7B4396, #DB2430);
+@define-color nino_gradient_pride linear-gradient(to right, #c6262e, #f37329, #f9c440, #68b723, #3689e6);
+ */

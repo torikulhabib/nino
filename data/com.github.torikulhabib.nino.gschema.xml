@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="com.github.torikulhabib.nino" path="/com/github/torikulhabib/nino/">
+    <key name="window-x" type="i">
+      <default>-1</default>
+      <summary>Most recent x position of Nino</summary>
+      <description>Most recent x position of Nino</description>
+    </key>
+    <key name="window-y" type="i">
+      <default>-1</default>
+      <summary>Most recent y position of Nino</summary>
+      <description>Most recent y position of Nino</description>
+    </key>
+    <key name="dialog-x" type="i">
+      <default>-1</default>
+      <summary>Most recent x position of Nino</summary>
+      <description>Most recent x position of Nino</description>
+    </key>
+    <key name="dialog-y" type="i">
+      <default>-1</default>
+      <summary>Most recent y position of Nino</summary>
+      <description>Most recent y position of Nino</description>
+    </key>
+
+    <key name="lock" type="b">
+      <default>false</default>
+      <summary>If the lock should be used</summary>
+      <description>If the lock should be used</description>
+    </key>
+    <key name="keep" type="b">
+      <default>false</default>
+      <summary>If the keep should be used</summary>
+      <description>If the keep should be used</description>
+    </key> 
+    <key name="color" type="s">
+      <default>"white"</default>
+      <summary>Most recent color theme of Nino</summary>
+      <description>Most recent color theme of Nino</description>
+    </key>
+  </schema>
+</schemalist>

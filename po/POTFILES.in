@@ -1,0 +1,11 @@
+data/com.github.torikulhabib.nino.appdata.xml.in
+data/com.github.torikulhabib.nino.desktop.in
+src/Application.vala
+src/MainWindow.vala
+src/MiniWindow.vala
+src/Services/Net.vala
+src/Services/Utils.vala
+src/Widgets/Preferences.vala
+src/Enums/Color.vala
+src/Configs/Constants.vala
+src/Configs/Settings.vala

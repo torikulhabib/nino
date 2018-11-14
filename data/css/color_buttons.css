@@ -1,0 +1,123 @@
+/*
+* Copyright (C) 2018  Carlos Lopez <calo_lrc@hotmail.com>
+* Copyright (C) 2018  Torikul habib <torik.habib@gmail.com>
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Affero General Public License for more details.
+* 
+* You should have received a copy of the GNU Affero General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* 
+*/
+
+@import url("/com/github/torikulhabib/nino/css/colors.css");
+
+.btn_white {
+    background: @nino_white;
+}
+
+.btn_black {
+    background: @nino_black;
+}
+
+.btn_pink {
+    background: @nino_pink;
+}
+
+.btn_red {
+    background: @nino_red;
+}
+
+.btn_orange {
+    background: @nino_orange;
+}
+
+.btn_yellow {
+    background: @nino_yellow;
+}
+
+.btn_green {
+    background: @nino_green;
+}
+
+.btn_teal {
+    background: @nino_teal;
+}
+
+.btn_blue {
+    background: @nino_blue;
+}
+
+.btn_purple {
+    background: @nino_purple;
+}
+
+.btn_coco {
+    background: @nino_coco;
+}
+
+
+.btn_gradient_blue_green {
+    background: linear-gradient(to right, #00F160, #0575E4);
+}
+
+.btn_gradient_purple_red {
+    background: linear-gradient(to right, #7B4396, #DB2430);
+}
+
+.btn_gradient_pride {
+    background: linear-gradient(90deg,
+    #db002a,
+    #db002a 14.28%, 
+    #ff43aa 14.28%, 
+    #ff43aa 28.56%, 
+    #f47600 28.56%, 
+    #f47600 42.84%, 
+    #f4ca00 42.84%, 
+    #f4ca00 57.12%, 
+    #00b74b 57.12%,
+    #00b74b 72.4%, 
+    #435db6 72.4%, 
+    #435db6 86.68%, 
+    #68008b 86.68%, 
+    #68008b);
+}
+
+.btn_trans_dark {
+    background-image: linear-gradient(90deg, #000000 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #000000 50%, #000000 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
+    background-clip: border-box;
+    background-size: 10px 10px;
+}
+
+.btn_trans_white {
+    background-image: linear-gradient(90deg, #ffffff 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #ffffff 50%, #ffffff 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
+    background-position: 0 0, 5px 5px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 10px 10px;
+}
+
+.btn_semitrans_dark {
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), linear-gradient(45deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 3px, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.05) 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 100%), rgb(255, 255, 255);
+    background-position: 0 0, 5px 5px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 10px 10px;
+}
+
+.btn_semitrans_white {
+    
+    background: linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), linear-gradient(45deg, rgba(0,0,0,0.0980392) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.0980392) 75%, rgba(0,0,0,0.0980392) 0), rgb(255, 255, 255);
+    background-position: 0 0, 5px 5px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 10px 10px;
+    
+}

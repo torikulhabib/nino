@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Nino
+Comment=A network monitor widget.
+GenericName=Network Monitor
+Exec=@EXEC_NAME@ %U
+Icon=@EXEC_NAME@
+Terminal=false
+Categories=Network;
+Keywords=Network;

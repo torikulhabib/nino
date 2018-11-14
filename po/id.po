@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.torikulhabib.nino package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.torikulhabib.nino\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-14 20:44+0700\n"
+"PO-Revision-Date: 2018-11-14 21:22+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: id\n"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:7
+#: data/com.github.torikulhabib.nino.desktop.in.in:3
+msgid "Nino"
+msgstr "Nino"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:8
+#: data/com.github.torikulhabib.nino.desktop.in.in:4
+msgid "A network monitor widget."
+msgstr "Sebuah wijet monitor jaringan."
+
+#: data/com.github.torikulhabib.nino.desktop.in.in:5
+msgid "Network Monitor"
+msgstr "Monitor Jaringan"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:10
+msgid "A internet speed monitor aplication with a simple appearance."
+msgstr "Aplikasi monitor kecepatan internet dengan tampilan sederhana."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:11
+msgid "Features:"
+msgstr "Fitur:"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:13
+msgid "Small window application features"
+msgstr "Fitur aplikasi jendela kecil"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:14
+msgid "Alert when no internet connection is connected."
+msgstr "Pemberitahuan saat tidak ada koneksi internet terhubung."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:15
+msgid "Many color theme choices available."
+msgstr "Banyak pilihan tema warna yang tersedia."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:16
+msgid "Lock position on the desktop."
+msgstr "Kunci Posisi di desktop."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:17
+msgid "Save the position of the widget."
+msgstr "Simpan posisi wijet."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:18
+msgid "The choice is always above the screen or below."
+msgstr "Pilihannya selalu di atas layar atau di bawah."
+
+#: src/MainWindow.vala:62
+msgid "Unlock"
+msgstr "Membuka Kunci"
+
+#: src/MainWindow.vala:63
+msgid "Lock"
+msgstr "Mengunci"
+
+#: src/MainWindow.vala:76
+msgid "Below"
+msgstr "Bawah"
+
+#: src/MainWindow.vala:77
+msgid "Above"
+msgstr "Atas"
+
+#: src/MainWindow.vala:92
+msgid "Colors"
+msgstr "Warna"
+
+#: src/MainWindow.vala:100
+msgid "Mini Window"
+msgstr "Jendela Kecil"
+
+#: src/MainWindow.vala:126 src/Widgets/Preferences.vala:203
+msgid "Close"
+msgstr "Tutup"
+
+#: src/MainWindow.vala:222 src/MiniWindow.vala:116
+msgid "Network Is Not Available"
+msgstr "Jaringan Tidak Tersedia"
+
+#: src/MainWindow.vala:230
+msgid "Connect to the Internet to Monitoring Network."
+msgstr "Sambungkan ke Internet untuk Memantau Jaringan."
+
+#: src/MainWindow.vala:238
+msgid "Network Settings…"
+msgstr "Pengaturan jaringan…"
+
+#: src/MainWindow.vala:334 src/MiniWindow.vala:49
+msgid "UPLOAD"
+msgstr "UNGGAH"
+
+#: src/MainWindow.vala:339
+msgid "Upload"
+msgstr "Unggah"
+
+#: src/MainWindow.vala:354 src/MiniWindow.vala:54
+msgid "DOWNLOAD"
+msgstr "UNDUH"
+
+#: src/MainWindow.vala:359
+msgid "Download"
+msgstr "Unduh"
+
+#: src/MiniWindow.vala:51
+msgid "Upload Speed"
+msgstr "Kecepatan Unggah"
+
+#: src/MiniWindow.vala:57
+msgid "Download Speed"
+msgstr "Kecepatan Unduh"
+
+#: src/Widgets/Preferences.vala:62
+msgid "Select a theme color"
+msgstr "Pilih sebuah warna tema"
+
+#: src/Widgets/Preferences.vala:150
+msgid "White"
+msgstr "Putih"
+
+#: src/Widgets/Preferences.vala:151
+msgid "Black"
+msgstr "Hitam"
+
+#: src/Widgets/Preferences.vala:152
+msgid "Pink"
+msgstr "Merah muda"
+
+#: src/Widgets/Preferences.vala:153
+msgid "Red"
+msgstr "Merah"
+
+#: src/Widgets/Preferences.vala:154
+msgid "Orange"
+msgstr "Oranye"
+
+#: src/Widgets/Preferences.vala:155
+msgid "Green"
+msgstr "Hijau"
+
+#: src/Widgets/Preferences.vala:156
+msgid "Teal"
+msgstr "Hijau muda"
+
+#: src/Widgets/Preferences.vala:157
+msgid "Yellow"
+msgstr "Kuning"
+
+#: src/Widgets/Preferences.vala:158
+msgid "Blue"
+msgstr "Biru"
+
+#: src/Widgets/Preferences.vala:159
+msgid "Purple"
+msgstr "Ungu"
+
+#: src/Widgets/Preferences.vala:160
+msgid "Coco"
+msgstr "Kelapa"
+
+#: src/Widgets/Preferences.vala:161
+msgid "Blue to Green"
+msgstr "Biru ke Hijau"
+
+#: src/Widgets/Preferences.vala:162
+msgid "Purple to Red"
+msgstr "Ungu ke Merah"
+
+#: src/Widgets/Preferences.vala:163
+msgid "Pride"
+msgstr "Kebanggan"
+
+#: src/Widgets/Preferences.vala:164
+msgid "Transparent black"
+msgstr "Transparan hitam"
+
+#: src/Widgets/Preferences.vala:165
+msgid "Transparent white"
+msgstr "Transparan putih"
+
+#: src/Widgets/Preferences.vala:166
+msgid "Semi Transparent black"
+msgstr "Semi Transparan hitam"
+
+#: src/Widgets/Preferences.vala:167
+msgid "Semi Transparent white"
+msgstr "Semi Transparan putiih"
