@@ -22,7 +22,7 @@
   ​<releases>
     <release version="1.2.0" date="2018-11-17">
       <description>
-        <p>Fix and add fitur</p>
+        <p>Fix and add feature</p>
         <ul>
           <li>Change switch to button.</li>
           <li>Add Lock position miniwindow.</li>
