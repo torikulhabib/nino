@@ -21,7 +21,7 @@ namespace nino {
 
     public class Constants {
         public abstract const string ID = "com.github.torikulhabib.nino";
-        public abstract const string VERSION = "1.0.1";
+        public abstract const string VERSION = "1.2.0";
         public abstract const string PROGRAME_NAME = "nino";
         public abstract const string APP_YEARS = "2018";
         public abstract const string APP_ICON = "com.github.torikulhabib.nino";

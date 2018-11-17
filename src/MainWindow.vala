@@ -29,6 +29,10 @@ namespace nino {
     private MiniWindow miniwindow = null;
     private Label network_down_label;
     private Label network_up_label;
+    private Image icon_below;
+    private Image icon_above;
+    private Image icon_lock;
+    private Image icon_unlock;
     private Image icon_down;
     private Image icon_up;
     private Button menu_button;
@@ -42,6 +46,9 @@ namespace nino {
     private Label description_label;
     private Image image;
     private Button action_button;
+    private Button lock_button;
+    private Button keep_button;
+    private bool miniwindow_active = false;
 
     Net net;
 
@@ -51,44 +58,46 @@ namespace nino {
                     resizable: false,
                     hexpand: true,
                     height_request: 272,
-                    width_request: 525);
+                    width_request: 525
+            );
         }
 
     construct {
             update ();
             net = new Net ();
-            stick ();
-            var lock_switch = new Granite.ModeSwitch.from_icon_name ("changes-allow-symbolic", "changes-prevent-symbolic");
-            lock_switch.primary_icon_tooltip_text = _("Unlock");
-            lock_switch.secondary_icon_tooltip_text = _("Lock");
-            lock_switch.valign = Gtk.Align.CENTER;
-		    lock_switch.notify["active"].connect (() => {
-		    if (lock_switch.active) {
-                type_hint = Gdk.WindowTypeHint.DESKTOP;
-		    } else {
-                type_hint = Gdk.WindowTypeHint.DIALOG;
-        		}
+
+            var settings = nino.Configs.Settings.get_settings ();
+		    settings.notify["lock-mode"].connect (() => {
+            set_lock_symbol ();
 		    });
 
-            NinoApp.settings.bind ("lock", lock_switch, "active", GLib.SettingsBindFlags.DEFAULT);
+            icon_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            icon_unlock = new Gtk.Image.from_icon_name ("changes-allow-symbolic", Gtk.IconSize.BUTTON);
 
-            var set_keep = new Granite.ModeSwitch.from_icon_name ("go-bottom-symbolic" , "go-top-symbolic");
-            set_keep.primary_icon_tooltip_text = _("Below");
-            set_keep.secondary_icon_tooltip_text = _("Above");
-            set_keep.valign = Gtk.Align.CENTER;
-		    set_keep.notify["active"].connect (() => {
-		    if (set_keep.active) {
-            set_keep_above (true);
-            set_keep_below (false);
-		    } else {
-            set_keep_below (true);
-            set_keep_above (false);
-        	}
+            lock_button = new Gtk.Button ();
+            set_lock_symbol ();
+            lock_button.tooltip_text = _ ("Desktop");
+            lock_button.can_focus = false;
+            lock_button.clicked.connect (() => {
+                settings.lock_switch ();
+            });
+
+		    settings.notify["keep-mode"].connect (() => {
+            set_keep_symbol ();
 		    });
 
-            NinoApp.settings.bind ("keep", set_keep, "active", GLib.SettingsBindFlags.DEFAULT);
+            icon_below = new Gtk.Image.from_icon_name ("go-bottom-symbolic", Gtk.IconSize.BUTTON);
+            icon_above = new Gtk.Image.from_icon_name ("go-top-symbolic", Gtk.IconSize.BUTTON);
 
-            menu_button = new Button.from_icon_name ("preferences-other-symbolic", IconSize.SMALL_TOOLBAR);
+            keep_button = new Gtk.Button ();
+            set_keep_symbol ();
+            keep_button.tooltip_text = _ ("Window");
+            keep_button.can_focus = false;
+            keep_button.clicked.connect (() => {
+                settings.keep_switch ();
+            });
+
+            menu_button = new Button.from_icon_name ("applications-graphics-symbolic", IconSize.SMALL_TOOLBAR);
             menu_button.tooltip_text = _("Colors");
             menu_button.clicked.connect (() => {
             if (preferences_dialog == null) {
@@ -104,6 +113,7 @@ namespace nino {
                 }
                 preferences_dialog.present ();
             });
+
             mini_button = new Button.from_icon_name ("window-new-symbolic", IconSize.SMALL_TOOLBAR);
             mini_button.tooltip_text = _("Mini Window");
             mini_button.clicked.connect (() => {
@@ -113,11 +123,11 @@ namespace nino {
                 miniwindow.show_all ();
                 miniwindow.destroy.connect (() => {
                     miniwindow = null;
-                    lock_switch.active = false;
-                    set_keep.active = true;
+                    miniwindow_active = false;
+                    set_keep_symbol ();
+                    show_all ();
                     });
-                lock_switch.active = true;
-                set_keep.active = false;
+                miniwindow_active = true;
                 }
                 miniwindow.present ();
             });
@@ -125,16 +135,26 @@ namespace nino {
             close_button = new Button.from_icon_name ("window-close-symbolic", IconSize.SMALL_TOOLBAR);
             close_button.tooltip_text = _("Close");
             close_button.clicked.connect (() => {
-                destroy ();
+                if (miniwindow_active == false) {
+                    destroy ();
+                } else {
+                    hide_on_delete ();
+                    int x = settings.window_x;
+                    int y = settings.window_y;
+
+                    if (x != -1 && y != -1) {
+                        move (x, y);
+                    }
+                }
             });
 
             var headerbar = new Gtk.HeaderBar ();
             headerbar.has_subtitle = false;
             headerbar.pack_start (close_button);
-            headerbar.pack_start (lock_switch);
+            headerbar.pack_start (lock_button);
             headerbar.pack_start (mini_button);
             headerbar.pack_end (menu_button);
-            headerbar.pack_end (set_keep);
+            headerbar.pack_end (keep_button);
             this.set_titlebar (headerbar);
 
             var header_context = headerbar.get_style_context ();
@@ -155,8 +175,6 @@ namespace nino {
             set_upload ();
             set_download ();
 
-
-            var settings = nino.Configs.Settings.get_instance ();
             int x = settings.window_x;
             int y = settings.window_y;
 
@@ -178,8 +196,6 @@ namespace nino {
             stack.add (spinner);
             stack.add_named (content, "connection");
             stack.add_named (layout, "no_network");
-
-
 
             var overlay = new Gtk.Overlay ();
             overlay.add (stack);
@@ -217,6 +233,40 @@ namespace nino {
             return false;
             });
     }
+
+    private void set_lock_symbol () {
+            var settings = nino.Configs.Settings.get_settings ();
+            switch (settings.lock_mode) {
+            case LockMode.LOCK :
+                lock_button.set_image (icon_lock);
+                stick ();
+                type_hint = Gdk.WindowTypeHint.DESKTOP;
+                break;
+            case LockMode.UNLOCK :
+                lock_button.set_image (icon_unlock);
+                type_hint = Gdk.WindowTypeHint.DIALOG;
+                unstick ();
+                break;
+            }
+            lock_button.show_all ();
+        }
+
+    private void set_keep_symbol () {
+            var settings = nino.Configs.Settings.get_settings ();
+            switch (settings.keep_mode) {
+            case KeepMode.ABOVE :
+                keep_button.set_image (icon_above);
+                set_keep_above (true);
+                set_keep_below (false);
+                break;
+            case KeepMode.BELOW :
+                keep_button.set_image (icon_below);
+                set_keep_above (false);
+                set_keep_below (true);
+                break;
+            }
+            keep_button.show_all ();
+        }
 
     private void network_conection () {
             title_label = new Gtk.Label ("Network Is Not Available");
@@ -260,7 +310,7 @@ namespace nino {
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
-            var settings = nino.Configs.Settings.get_instance ();
+            var settings = nino.Configs.Settings.get_settings ();
             int root_x, root_y;
             get_position (out root_x, out root_y);
             settings.window_x = root_x;
@@ -269,7 +319,7 @@ namespace nino {
         }
 
     public void change_color (string color) {
-            var settings = nino.Configs.Settings.get_instance ();
+            var settings = nino.Configs.Settings.get_settings ();
             var css_provider = new Gtk.CssProvider ();
             var url_css = Constants.URL_CSS_WHITE;
 

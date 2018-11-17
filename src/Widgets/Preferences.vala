@@ -58,6 +58,7 @@ namespace nino {
         }
 
         construct {
+            set_keep_above (true);
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
             var label = new Label (_("Select a theme color"));
 

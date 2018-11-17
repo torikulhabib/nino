@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.torikulhabib.nino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-14 20:44+0700\n"
-"PO-Revision-Date: 2018-11-14 21:22+0700\n"
+"POT-Creation-Date: 2018-11-17 10:36+0700\n"
+"PO-Revision-Date: 2018-11-17 10:49+0700\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgid "Network Monitor"
 msgstr "Monitor Jaringan"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "A internet speed monitor apps."
+msgid "An internet speed monitor apps."
 msgstr "Aplikasi monitor kecepatan internet."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:11
@@ -62,144 +62,137 @@ msgstr "Simpan posisi wijet."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:18
 msgid "The choice is always above the screen or below."
-msgstr "Pilihannya selalu di atas layar atau di bawah."
+msgstr "Pilihan selalu di atas layar atau di bawah."
 
-#: src/MainWindow.vala:62
-msgid "Unlock"
-msgstr "Membuka Kunci"
+#: src/MainWindow.vala:79
+msgid "Desktop"
+msgstr "Layar Komputer"
 
-#: src/MainWindow.vala:63
-msgid "Lock"
-msgstr "Mengunci"
+#: src/MainWindow.vala:94
+msgid "Window"
+msgstr "Jendela"
 
-#: src/MainWindow.vala:76
-msgid "Below"
-msgstr "Bawah"
-
-#: src/MainWindow.vala:77
-msgid "Above"
-msgstr "Atas"
-
-#: src/MainWindow.vala:92
-msgid "Colors"
-msgstr "Warna"
-
-#: src/MainWindow.vala:100
+#: src/MainWindow.vala:118
 msgid "Mini Window"
 msgstr "Jendela Kecil"
 
-#: src/MainWindow.vala:126 src/Widgets/Preferences.vala:203
+#: src/MainWindow.vala:136 src/Widgets/Preferences.vala:204
+#: src/MiniWindow.vala:89
 msgid "Close"
 msgstr "Tutup"
 
-#: src/MainWindow.vala:222 src/MiniWindow.vala:116
+#: src/MiniWindow.vala:71
+msgid "Position"
+msgstr "Posisi"
+
+#: src/MainWindow.vala:222 src/MiniWindow.vala:187
 msgid "Network Is Not Available"
 msgstr "Jaringan Tidak Tersedia"
 
-#: src/MainWindow.vala:230
+#: src/MainWindow.vala:280
 msgid "Connect to the Internet to Monitoring Network."
 msgstr "Sambungkan ke Internet untuk Memantau Jaringan."
 
-#: src/MainWindow.vala:238
+#: src/MainWindow.vala:288
 msgid "Network Settings…"
 msgstr "Pengaturan jaringan…"
 
-#: src/MainWindow.vala:334 src/MiniWindow.vala:49
+#: src/MainWindow.vala:384 src/MiniWindow.vala:78
 msgid "UPLOAD"
 msgstr "UNGGAH"
 
-#: src/MainWindow.vala:339
+#: src/MainWindow.vala:389
 msgid "Upload"
 msgstr "Unggah"
 
-#: src/MainWindow.vala:354 src/MiniWindow.vala:54
+#: src/MainWindow.vala:404 src/MiniWindow.vala:83
 msgid "DOWNLOAD"
 msgstr "UNDUH"
 
-#: src/MainWindow.vala:359
+#: src/MainWindow.vala:409
 msgid "Download"
 msgstr "Unduh"
 
-#: src/MiniWindow.vala:51
+#: src/MiniWindow.vala:80
 msgid "Upload Speed"
 msgstr "Kecepatan Unggah"
 
-#: src/MiniWindow.vala:57
+#: src/MiniWindow.vala:86
 msgid "Download Speed"
-msgstr "Kecepatan Unduh"
+msgstr "Kecepatan unduh"
 
-#: src/Widgets/Preferences.vala:62
+#: src/Widgets/Preferences.vala:63
 msgid "Select a theme color"
 msgstr "Pilih sebuah warna tema"
 
-#: src/Widgets/Preferences.vala:150
+#: src/Widgets/Preferences.vala:151
 msgid "White"
 msgstr "Putih"
 
-#: src/Widgets/Preferences.vala:151
+#: src/Widgets/Preferences.vala:152
 msgid "Black"
 msgstr "Hitam"
 
-#: src/Widgets/Preferences.vala:152
-msgid "Pink"
-msgstr "Merah muda"
-
 #: src/Widgets/Preferences.vala:153
+msgid "Pink"
+msgstr "Merah Muda"
+
+#: src/Widgets/Preferences.vala:154
 msgid "Red"
 msgstr "Merah"
 
-#: src/Widgets/Preferences.vala:154
+#: src/Widgets/Preferences.vala:155
 msgid "Orange"
 msgstr "Oranye"
 
-#: src/Widgets/Preferences.vala:155
+#: src/Widgets/Preferences.vala:156
 msgid "Green"
 msgstr "Hijau"
 
-#: src/Widgets/Preferences.vala:156
-msgid "Teal"
-msgstr "Hijau muda"
-
 #: src/Widgets/Preferences.vala:157
+msgid "Teal"
+msgstr "Hijau Muda"
+
+#: src/Widgets/Preferences.vala:158
 msgid "Yellow"
 msgstr "Kuning"
 
-#: src/Widgets/Preferences.vala:158
+#: src/Widgets/Preferences.vala:159
 msgid "Blue"
 msgstr "Biru"
 
-#: src/Widgets/Preferences.vala:159
+#: src/Widgets/Preferences.vala:160
 msgid "Purple"
 msgstr "Ungu"
 
-#: src/Widgets/Preferences.vala:160
+#: src/Widgets/Preferences.vala:161
 msgid "Coco"
 msgstr "Kelapa"
 
-#: src/Widgets/Preferences.vala:161
+#: src/Widgets/Preferences.vala:162
 msgid "Blue to Green"
 msgstr "Biru ke Hijau"
 
-#: src/Widgets/Preferences.vala:162
+#: src/Widgets/Preferences.vala:163
 msgid "Purple to Red"
 msgstr "Ungu ke Merah"
 
-#: src/Widgets/Preferences.vala:163
+#: src/Widgets/Preferences.vala:164
 msgid "Pride"
 msgstr "Kebanggan"
 
-#: src/Widgets/Preferences.vala:164
-msgid "Transparent black"
-msgstr "Transparan hitam"
-
 #: src/Widgets/Preferences.vala:165
+msgid "Transparent black"
+msgstr "Transparan gelap"
+
+#: src/Widgets/Preferences.vala:166
 msgid "Transparent white"
 msgstr "Transparan putih"
 
-#: src/Widgets/Preferences.vala:166
-msgid "Semi Transparent black"
-msgstr "Semi Transparan hitam"
-
 #: src/Widgets/Preferences.vala:167
+msgid "Semi Transparent black"
+msgstr "Semi transparan hitam"
+
+#: src/Widgets/Preferences.vala:168
 msgid "Semi Transparent white"
-msgstr "Semi Transparan putiih"
+msgstr "Semi transparan putih"

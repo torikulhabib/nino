@@ -20,21 +20,74 @@
 */
 
 namespace nino.Configs {
+    public enum LockMode {
+        LOCK = 0,
+        UNLOCK = 1
+    }
+    public enum KeepMode {
+        ABOVE = 0,
+        BELOW = 1
+    }
+    public enum MiniLockMode {
+        LOCK = 0,
+        UNLOCK = 1
+    }
+
     public class Settings : Granite.Services.Settings {
-        private static Settings? instance;
+        private static Settings? settings;
         public int dialog_x { get; set; }
         public int dialog_y { get; set; }
         public int window_x { get; set; }
         public int window_y { get; set; }
+        public LockMode lock_mode { get; set; }
+        public KeepMode keep_mode { get; set; }
+        public MiniLockMode mini_lock_mode { get; set; }
         public string color { get; set; }
+
         private Settings () {
             base ("com.github.torikulhabib.nino");
         }
-        public static unowned Settings get_instance () {
-            if (instance == null) {
-                instance = new Settings ();
+
+        public void lock_switch () {
+            switch (settings.lock_mode) {
+                case LockMode.LOCK:
+                    settings.lock_mode = LockMode.UNLOCK;
+                    break;
+                default:
+                    settings.lock_mode = LockMode.LOCK;
+                    break;
             }
-            return instance;
         }
+
+        public void keep_switch () {
+            switch (settings.keep_mode) {
+                case KeepMode.ABOVE:
+                    settings.keep_mode = KeepMode.BELOW;
+                    break;
+                default:
+                    settings.keep_mode = KeepMode.ABOVE;
+                    break;
+            }
+        }
+
+        public void mini_lock_switch () {
+            switch (settings.mini_lock_mode) {
+                case MiniLockMode.LOCK:
+                    settings.mini_lock_mode = MiniLockMode.UNLOCK;
+                    break;
+                default:
+                    settings.mini_lock_mode = MiniLockMode.LOCK;
+                    break;
+            }
+        }
+
+        public static unowned Settings get_settings () {
+            if (settings == null) {
+                settings = new Settings ();
+            }
+            return settings;
+        }
+
+
     }
 }

@@ -19,32 +19,61 @@
 * Authored by: torikulhabib <torik.habib@gmail.com>
 */
 
+using nino.Configs;
 using Gtk;
 
 namespace nino {
-    public class MiniWindow : Gtk.Dialog {
+    public class MiniWindow : Gtk.Window {
     private Grid network_view;
     private Stack stack;
     private Label network_down_label;
     private Label network_up_label;
+    private Image mini_icon_lock;
+    private Image mini_icon_unlock;
+    private Button close_button;
+    private Button mini_lock_button;
     Net net;
-        public MiniWindow (Gtk.Window? parent) {
-            Object (
-                border_width: 0,
-                deletable: false,
-                resizable: false,
-                transient_for: parent,
-                destroy_with_parent: true,
-                height_request: 20,
-                width_request: 120
+
+    public MiniWindow (Gtk.Window? application) {
+            Object (border_width: 0,
+                    deletable: false,
+                    resizable: false,
+                    destroy_with_parent: true,
+                    height_request: 20,
+                    width_request: 120
             );
         }
 
-        construct {
+    construct {
             update ();
+
             net = new Net ();
+            var settings = nino.Configs.Settings.get_settings ();
+            int x = settings.dialog_x;
+            int y = settings.dialog_y;
+
+            if (x != -1 && y != -1) {
+                move (x, y);
+            }
+
             set_keep_above (true);
             set_keep_below (false);
+
+		    settings.notify["mini-lock-mode"].connect (() => {
+            set_mini_lock_symbol ();
+		    });
+
+            mini_icon_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            mini_icon_unlock = new Gtk.Image.from_icon_name ("changes-allow-symbolic", Gtk.IconSize.BUTTON);
+
+            mini_lock_button = new Gtk.Button ();
+            set_mini_lock_symbol ();
+            mini_lock_button.tooltip_text = _ ("Position");
+            mini_lock_button.can_focus = false;
+            mini_lock_button.clicked.connect (() => {
+                settings.mini_lock_switch ();
+                set_mini_lock_symbol ();
+            });
 
             network_up_label = new Gtk.Label ("UPLOAD");
             network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
@@ -55,6 +84,28 @@ namespace nino {
             network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_down_label.hexpand = true;
             network_down_label.tooltip_text = _("Download Speed");
+
+            close_button = new Button.from_icon_name ("window-close-symbolic", IconSize.SMALL_TOOLBAR);
+            close_button.tooltip_text = _("Close");
+
+            close_button.clicked.connect (() => {
+                destroy ();
+            });
+
+            var headerbar = new Gtk.HeaderBar ();
+            headerbar.has_subtitle = false;
+            headerbar.pack_start (close_button);
+            headerbar.pack_end (mini_lock_button);
+            this.set_titlebar (headerbar);
+
+            var header_context = headerbar.get_style_context ();
+            header_context.add_class ("default-decoration");
+            header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+
+            var style_context = get_style_context ();
+            style_context.add_class ("rounded");
+            style_context.add_class ("widget_background");
+            style_context.add_class ("flat");
 
             var main_grid = new Gtk.Grid ();
             main_grid.margin = 4;
@@ -72,21 +123,15 @@ namespace nino {
             stack.add_named (main_grid, "main");
             stack.add_named (network_view, "no_network");
 
-            var content = get_content_area () as Gtk.Box;
-            content.margin = 4;
-            content.margin_top = 0;
-            content.add (stack);
+            var overlay = new Gtk.Overlay ();
+            overlay.margin = 4;
+            overlay.margin_top = 0;
+            overlay.add (stack);
+            add (overlay);
+            show_all ();
 
             main_grid.attach (network_up_label,            0, 0, 1, 1);
             main_grid.attach (network_down_label,          0, 1, 1, 1);
-
-            var settings = nino.Configs.Settings.get_instance ();
-            int x = settings.dialog_x;
-            int y = settings.dialog_y;
-
-            if (x != -1 && y != -1) {
-                move (x, y);
-            }
 
             button_press_event.connect ((e) => {
                 if (e.button == Gdk.BUTTON_PRIMARY) {
@@ -95,6 +140,15 @@ namespace nino {
                 }
                 return false;
             }); 
+        }
+
+    public override bool configure_event (Gdk.EventConfigure event) {
+            var settings = nino.Configs.Settings.get_settings ();
+            int root_x, root_y;
+            get_position (out root_x, out root_y);
+            settings.dialog_x = root_x;
+            settings.dialog_y = root_y;
+            return base.configure_event (event);
         }
 
     private void update_view () {
@@ -110,6 +164,23 @@ namespace nino {
             });
     }
 
+    private void set_mini_lock_symbol () {
+            var settings = nino.Configs.Settings.get_settings ();
+            switch (settings.mini_lock_mode) {
+            case MiniLockMode.LOCK :
+                mini_lock_button.set_image (mini_icon_lock);
+                stick ();
+                type_hint = Gdk.WindowTypeHint.COMBO;
+                break;
+            case MiniLockMode.UNLOCK :
+                mini_lock_button.set_image (mini_icon_unlock);
+                unstick ();
+                type_hint = Gdk.WindowTypeHint.DIALOG;
+                break;
+            }
+            mini_lock_button.show_all ();
+        }
+
     private void network_conection () {
 
             var alert = new Gtk.Image.from_icon_name ("network-error", Gtk.IconSize.DIALOG);
@@ -122,14 +193,6 @@ namespace nino {
             network_view.attach (alert, 0, 0, 1, 1);
 
     }
-    public override bool configure_event (Gdk.EventConfigure event) {
-            var settings = nino.Configs.Settings.get_instance ();
-            int root_x, root_y;
-            get_position (out root_x, out root_y);
-            settings.dialog_x = root_x;
-            settings.dialog_y = root_y;
-            return base.configure_event (event);
-        }
 
     private void update () {
             Timeout.add_seconds (1, () => {
