@@ -54,7 +54,7 @@ namespace nino {
 
     public  MainWindow (Gtk.Application application) {
             Object (application: application,
-                    icon_name: "com.github.torikulhabib.netspeed",
+                    icon_name: "com.github.torikulhabib.nino",
                     resizable: false,
                     hexpand: true,
                     height_request: 272,
@@ -241,6 +241,12 @@ namespace nino {
                 lock_button.set_image (icon_lock);
                 stick ();
                 type_hint = Gdk.WindowTypeHint.DESKTOP;
+                int x = settings.window_x;
+                int y = settings.window_y;
+
+                if (x != -1 && y != -1) {
+                    move (x, y);
+                }
                 break;
             case LockMode.UNLOCK :
                 lock_button.set_image (icon_unlock);

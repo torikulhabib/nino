@@ -170,7 +170,7 @@ namespace nino {
             case MiniLockMode.LOCK :
                 mini_lock_button.set_image (mini_icon_lock);
                 stick ();
-                type_hint = Gdk.WindowTypeHint.COMBO;
+                type_hint = Gdk.WindowTypeHint.SPLASHSCREEN;
                 break;
             case MiniLockMode.UNLOCK :
                 mini_lock_button.set_image (mini_icon_unlock);

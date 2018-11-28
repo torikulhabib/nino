@@ -1,5 +1,7 @@
 # Nino
 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.torikulhabib.nino)
+
 A network monitor widget
 internet speed monitor with a simple appearance
 Features:
