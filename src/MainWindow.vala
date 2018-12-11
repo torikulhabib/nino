@@ -42,9 +42,6 @@ namespace nino {
     private Grid layout;
     private Grid upload;
     private Grid download;
-    private Label title_label;
-    private Label description_label;
-    private Image image;
     private Button action_button;
     private Button lock_button;
     private Button keep_button;
@@ -139,12 +136,7 @@ namespace nino {
                     destroy ();
                 } else {
                     hide_on_delete ();
-                    int x = settings.window_x;
-                    int y = settings.window_y;
-
-                    if (x != -1 && y != -1) {
-                        move (x, y);
-                    }
+                    update_position ();
                 }
             });
 
@@ -175,12 +167,7 @@ namespace nino {
             set_upload ();
             set_download ();
 
-            int x = settings.window_x;
-            int y = settings.window_y;
-
-            if (x != -1 && y != -1) {
-                move (x, y);
-            }
+            update_position ();
 
             network_conection ();
             update_view ();
@@ -224,7 +211,7 @@ namespace nino {
     private void update_view () {
             var connection_available = NetworkMonitor.get_default ().get_network_available ();
 
-            Timeout.add_seconds (1, () => {
+            GLib.Timeout.add_seconds (0, () => {
             if (connection_available) {
             stack.visible_child_name = "connection";
             } else {
@@ -234,6 +221,15 @@ namespace nino {
             });
     }
 
+    private void update_position () {
+        var settings = nino.Configs.Settings.get_settings ();
+        int x = settings.window_x;
+        int y = settings.window_y;
+        if (x != -1 && y != -1) {
+            move (x, y);
+        }
+    }
+
     private void set_lock_symbol () {
             var settings = nino.Configs.Settings.get_settings ();
             switch (settings.lock_mode) {
@@ -241,12 +237,7 @@ namespace nino {
                 lock_button.set_image (icon_lock);
                 stick ();
                 type_hint = Gdk.WindowTypeHint.DESKTOP;
-                int x = settings.window_x;
-                int y = settings.window_y;
-
-                if (x != -1 && y != -1) {
-                    move (x, y);
-                }
+                update_position ();
                 break;
             case LockMode.UNLOCK :
                 lock_button.set_image (icon_unlock);
@@ -275,7 +266,7 @@ namespace nino {
         }
 
     private void network_conection () {
-            title_label = new Gtk.Label ("Network Is Not Available");
+            var title_label = new Gtk.Label ("Network Is Not Available");
             title_label.hexpand = true;
             title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
             title_label.max_width_chars = 40;
@@ -283,7 +274,7 @@ namespace nino {
             title_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
             title_label.xalign = 0;
 
-            description_label = new Gtk.Label ("Connect to the Internet to Monitoring Network.");
+            var description_label = new Gtk.Label ("Connect to the Internet to Monitoring Network.");
             description_label.hexpand = true;
             description_label.max_width_chars = 40;
             description_label.wrap = true;
@@ -297,7 +288,7 @@ namespace nino {
             action_button.margin_top = 2;
             action_button.margin_bottom = 2;
 
-            image = new Gtk.Image.from_icon_name ("network-error", Gtk.IconSize.DIALOG);
+            var image = new Gtk.Image.from_icon_name ("network-error", Gtk.IconSize.DIALOG);
             image.margin_top = 6;
             image.valign = Gtk.Align.START;
 
@@ -420,7 +411,7 @@ namespace nino {
     }
 
     private void update () {
-            Timeout.add_seconds (1, () => {
+            GLib.Timeout.add_seconds (1, () => {
             update_data ();
                 return true;
             });

@@ -154,7 +154,7 @@ namespace nino {
     private void update_view () {
             var connection_available = NetworkMonitor.get_default ().get_network_available ();
 
-            Timeout.add_seconds (1, () => {
+            GLib.Timeout.add_seconds (0, () => {
             if (connection_available) {
             stack.visible_child_name = "main";
             } else {
