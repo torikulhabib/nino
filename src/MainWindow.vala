@@ -118,6 +118,8 @@ namespace nino {
                 debug ("MiniWindow button pressed.");
                 miniwindow = new MiniWindow (this);
                 miniwindow.show_all ();
+                hide_on_delete ();
+                update_position ();
                 miniwindow.destroy.connect (() => {
                     miniwindow = null;
                     miniwindow_active = false;
