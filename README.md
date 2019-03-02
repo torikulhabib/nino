@@ -7,9 +7,9 @@ Nino is an internet speed monitor with a simple appearance.
 Features:
 
 * Small window application features.
-* Alert when no internet connection is connected.
-* Many color theme choices available.
-* lock position on the desktop.
+* Alert when no internet connection is available.
+* Many color theme choices are available.
+* Lock position on the desktop.
 * Save the position of the widget.
 * The choice is always above the screen or below.
 
