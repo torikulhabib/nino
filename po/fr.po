@@ -56,7 +56,7 @@ msgstr "Verrouillez la position sur le bureau."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:17
 msgid "Save the position of the widget."
-msgstr "Enregistrez la position du widget"
+msgstr "Enregistrez la position du widget."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:18
 msgid "The choice is always above the screen or below."
