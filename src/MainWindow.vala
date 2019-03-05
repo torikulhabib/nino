@@ -25,8 +25,8 @@ using Gtk;
 namespace nino {
     public class MainWindow : Gtk.Window {
     private Stack stack;
-    private Preferences preferences_dialog = null;
-    private MiniWindow miniwindow = null;
+    private Preferences preferences_dialog;
+    private MiniWindow miniwindow;
     private Label network_down_label;
     private Label network_up_label;
     private Image icon_below;
@@ -45,7 +45,6 @@ namespace nino {
     private Button action_button;
     private Button lock_button;
     private Button keep_button;
-    private bool miniwindow_active = false;
 
     Net net;
 
@@ -114,30 +113,26 @@ namespace nino {
             mini_button = new Button.from_icon_name ("window-new-symbolic", IconSize.SMALL_TOOLBAR);
             mini_button.tooltip_text = _("Mini Window");
             mini_button.clicked.connect (() => {
-            if (miniwindow == null) {
-                debug ("MiniWindow button pressed.");
-                miniwindow = new MiniWindow (this);
-                miniwindow.show_all ();
-                miniwindow.destroy.connect (() => {
-                    miniwindow = null;
-                    miniwindow_active = false;
-                    set_keep_symbol ();
-                    show_all ();
+                if (miniwindow == null) {
+                    debug ("MiniWindow button pressed.");
+                    miniwindow = new MiniWindow (application);
+                    miniwindow.show_all ();
+                    hide_on_delete ();
+                    update_position ();
+                    NinoApp.settings.set_enum ("window-mode", 1);
+                    miniwindow.destroy.connect (() => {
+                        // If miniwinidow is closed, also close mainwindow and quit the app
+                        destroy ();
                     });
-                miniwindow_active = true;
                 }
+
                 miniwindow.present ();
             });
 
             close_button = new Button.from_icon_name ("window-close-symbolic", IconSize.SMALL_TOOLBAR);
             close_button.tooltip_text = _("Close");
             close_button.clicked.connect (() => {
-                if (miniwindow_active == false) {
-                    destroy ();
-                } else {
-                    hide_on_delete ();
-                    update_position ();
-                }
+                destroy ();
             });
 
             var headerbar = new Gtk.HeaderBar ();

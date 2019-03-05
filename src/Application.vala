@@ -22,17 +22,22 @@
 namespace nino {
     public class NinoApp : Granite.Application {
         public static GLib.Settings settings;
-        private MainWindow mainwindow = null;
+        private MainWindow mainwindow;
+        private MiniWindow miniwindow;
+
         public NinoApp () {
             Object(
                 application_id: "com.github.torikulhabib.nino", 
                 flags: ApplicationFlags.FLAGS_NONE
             );
+        }
+
+        construct {
             var quit_action = new SimpleAction ("quit", null);
             quit_action.activate.connect (() => {
-                if (mainwindow != null) {
-                mainwindow.destroy ();
-            }
+                if (get_windows ().length () > 0) {
+                    get_windows ().data.destroy ();
+                }
             });
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Ctrl>Q"});
@@ -43,13 +48,18 @@ namespace nino {
         }
 
         protected override void activate () {
-        if (get_windows ().length () > 0) {
-            get_windows ().data.present ();
-            return;
-        }
-            mainwindow = new MainWindow (this);
-            mainwindow.set_application(this);
-            mainwindow.show_all ();
+            if (get_windows ().length () > 0) {
+                get_windows ().data.present ();
+                return;
+            }
+
+            if (settings.get_enum ("window-mode") == 0) {
+                mainwindow = new MainWindow (this);
+                mainwindow.show_all ();
+            } else {
+                miniwindow = new MiniWindow (this);
+                miniwindow.show_all ();
+            }
 
             var color = settings.get_string ("color");
             string css = color;
