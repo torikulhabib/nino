@@ -92,7 +92,7 @@ msgid "Connect to the Internet to Monitoring Network."
 msgstr "Connectez-vous à Internet pour surveiller le réseau."
 
 #: src/MainWindow.vala:288
-msgid "Network Settings"
+msgid "Network Settings…"
 msgstr "Paramètres réseau…"
 
 #: src/MainWindow.vala:384 src/MiniWindow.vala:78
