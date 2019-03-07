@@ -266,7 +266,7 @@ namespace nino {
         }
 
     private void network_conection () {
-            var title_label = new Gtk.Label ("Network Is Not Available");
+            var title_label = new Gtk.Label (_ ("Network Is Not Available"));
             title_label.hexpand = true;
             title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
             title_label.max_width_chars = 40;
@@ -274,7 +274,7 @@ namespace nino {
             title_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
             title_label.xalign = 0;
 
-            var description_label = new Gtk.Label ("Connect to the Internet to Monitoring Network.");
+            var description_label = new Gtk.Label (_ ("Connect to the Internet to Monitoring Network."));
             description_label.hexpand = true;
             description_label.max_width_chars = 40;
             description_label.wrap = true;
@@ -378,7 +378,7 @@ namespace nino {
             icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
             upload.attach (icon_up, 0, 0, 1, 1);
 
-            network_up_label = new Gtk.Label ("UPLOAD");
+            network_up_label = new Gtk.Label (_ ("UPLOAD"));
             network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_up_label.hexpand = true;
             upload.attach (network_up_label, 0, 1, 1, 1);
@@ -398,7 +398,7 @@ namespace nino {
             icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
             download.attach (icon_down, 0, 0, 1, 1);
 
-	        network_down_label = new Gtk.Label ("DOWNLOAD");
+	        network_down_label = new Gtk.Label (_ ("DOWNLOAD"));
             network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_down_label.hexpand = true;
             download.attach (network_down_label, 0, 1, 1, 1);
