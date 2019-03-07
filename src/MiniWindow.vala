@@ -39,7 +39,6 @@ namespace nino {
     public MiniWindow (Gtk.Application application) {
             Object (application: application,
                     border_width: 0,
-                    deletable: false,
                     resizable: false,
                     destroy_with_parent: true,
                     height_request: 20,
