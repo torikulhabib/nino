@@ -96,12 +96,12 @@ namespace nino {
                 mainwindow.present ();
             });
 
-            network_up_label = new Gtk.Label ("UPLOAD");
+            network_up_label = new Gtk.Label (_("UPLOAD"));
             network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_up_label.tooltip_text = _("Upload Speed");
             network_up_label.hexpand = true;
 
-	        network_down_label = new Gtk.Label ("DOWNLOAD");
+            network_down_label = new Gtk.Label (_("DOWNLOAD"));
             network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_down_label.hexpand = true;
             network_down_label.tooltip_text = _("Download Speed");

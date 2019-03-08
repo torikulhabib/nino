@@ -1,5 +1,5 @@
 data/com.github.torikulhabib.nino.appdata.xml.in
-data/com.github.torikulhabib.nino.desktop.in
+data/com.github.torikulhabib.nino.desktop.in.in
 src/Application.vala
 src/MainWindow.vala
 src/MiniWindow.vala

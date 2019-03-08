@@ -97,6 +97,8 @@ appstream_file = i18n.merge_file(
     install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
+subdir('po')
+
 message ('Adds files to build')
 
 code_files = files(
