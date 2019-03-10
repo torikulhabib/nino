@@ -24,6 +24,7 @@ using Gtk;
 
 namespace nino {
     public class MiniWindow : Gtk.Window {
+    private MainWindow mainwindow;
     private Grid network_view;
     private Stack stack;
     private Label network_down_label;
@@ -32,11 +33,12 @@ namespace nino {
     private Image mini_icon_unlock;
     private Button close_button;
     private Button mini_lock_button;
+
     Net net;
 
-    public MiniWindow (Gtk.Window? application) {
-            Object (border_width: 0,
-                    deletable: false,
+    public MiniWindow (Gtk.Application application) {
+            Object (application: application,
+                    border_width: 0,
                     resizable: false,
                     destroy_with_parent: true,
                     height_request: 20,
@@ -75,12 +77,31 @@ namespace nino {
                 set_mini_lock_symbol ();
             });
 
+            var main_button = new Button.from_icon_name ("window-new-symbolic", IconSize.SMALL_TOOLBAR);
+            main_button.tooltip_text = _("Mini Window");
+            main_button.clicked.connect (() => {
+                if (mainwindow == null) {
+                    debug ("MainWindow button pressed.");
+                    mainwindow = new MainWindow (application);
+                    mainwindow.show_all ();
+                    hide_on_delete ();
+                    update_position ();
+                    NinoApp.settings.set_enum ("window-mode", 0);
+                    mainwindow.destroy.connect (() => {
+                        // If mainwindow is closed, also close miniwinidow and quit the app
+                        destroy ();
+                    });
+                }
+
+                mainwindow.present ();
+            });
+
             network_up_label = new Gtk.Label (_("UPLOAD"));
             network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_up_label.tooltip_text = _("Upload Speed");
             network_up_label.hexpand = true;
 
-	        network_down_label = new Gtk.Label (_("DOWNLOAD"));
+            network_down_label = new Gtk.Label (_("DOWNLOAD"));
             network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
             network_down_label.hexpand = true;
             network_down_label.tooltip_text = _("Download Speed");
@@ -95,6 +116,7 @@ namespace nino {
             var headerbar = new Gtk.HeaderBar ();
             headerbar.has_subtitle = false;
             headerbar.pack_start (close_button);
+            headerbar.pack_end (main_button);
             headerbar.pack_end (mini_lock_button);
             this.set_titlebar (headerbar);
 
@@ -162,6 +184,15 @@ namespace nino {
             }
             return false;
             });
+    }
+
+    private void update_position () {
+        var settings = nino.Configs.Settings.get_settings ();
+        int x = settings.window_x;
+        int y = settings.window_y;
+        if (x != -1 && y != -1) {
+            move (x, y);
+        }
     }
 
     private void set_mini_lock_symbol () {
