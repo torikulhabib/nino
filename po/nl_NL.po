@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.torikulhabib.nino package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.torikulhabib.nino\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-17 10:36+0700\n"
+"PO-Revision-Date: 2019-03-17 17:33+0100\n"
+"Language-Team: Dutch <vistausss@outlook.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_NL\n"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:7
+#: data/com.github.torikulhabib.nino.desktop.in.in:3
+msgid "Nino"
+msgstr "Nino"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:8
+#: data/com.github.torikulhabib.nino.desktop.in.in:4
+msgid "A network monitor widget"
+msgstr "Een widget voor het monitoren van netwerkverkeer"
+
+#: data/com.github.torikulhabib.nino.desktop.in.in:5
+msgid "Network Monitor"
+msgstr "Netwerkmonitor"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:10
+msgid "An internet speed monitor apps."
+msgstr "Een app voor het monitoren van de internetsnelheid."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:11
+msgid "Features:"
+msgstr "Mogelijkheden:"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:13
+msgid "Small window application features"
+msgstr "Mogelijkheden in klein venster"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:14
+msgid "Alert when no internet connection is connected."
+msgstr "Melding als er geen internetverbinding is."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:15
+msgid "Many color theme choices available."
+msgstr "Vele kleurenschema's beschikbaar."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:16
+msgid "Lock position on the desktop."
+msgstr "Positie vergrendelen op het bureaublad."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:17
+msgid "Save the position of the widget."
+msgstr "Widgetpositie opslaan."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:18
+msgid "The choice is always above the screen or below."
+msgstr "De keuze is altijd erboven of eronder."
+
+#: src/MainWindow.vala:79
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: src/MainWindow.vala:94
+msgid "Window"
+msgstr "Venster"
+
+#: src/MainWindow.vala:118
+msgid "Mini Window"
+msgstr "Mini-venster"
+
+#: src/MainWindow.vala:136 src/Widgets/Preferences.vala:204
+#: src/MiniWindow.vala:89
+msgid "Close"
+msgstr "Sluiten"
+
+#: src/MiniWindow.vala:71
+msgid "Position"
+msgstr "Positie"
+
+#: src/MainWindow.vala:222 src/MiniWindow.vala:187
+msgid "Network Is Not Available"
+msgstr "Geen netwerkverbinding"
+
+#: src/MainWindow.vala:280
+msgid "Connect to the Internet to Monitoring Network."
+msgstr "Maak verbinding met het internet om het te monitoren."
+
+#: src/MainWindow.vala:288
+msgid "Network Settings…"
+msgstr "Netwerkinstellingen…"
+
+#: src/MainWindow.vala:384 src/MiniWindow.vala:78
+msgid "UPLOAD"
+msgstr "UPLOAD"
+
+#: src/MainWindow.vala:389
+msgid "Upload"
+msgstr "Upload"
+
+#: src/MainWindow.vala:404 src/MiniWindow.vala:83
+msgid "DOWNLOAD"
+msgstr "DOWNLOAD"
+
+#: src/MainWindow.vala:409
+msgid "Download"
+msgstr "Download"
+
+#: src/MiniWindow.vala:80
+msgid "Upload Speed"
+msgstr "Uploadsnelheid"
+
+#: src/MiniWindow.vala:86
+msgid "Download Speed"
+msgstr "Downloadsnelheid"
+
+#: src/Widgets/Preferences.vala:63
+msgid "Select a theme color"
+msgstr "Kies een themakleur"
+
+#: src/Widgets/Preferences.vala:151
+msgid "White"
+msgstr "Wit"
+
+#: src/Widgets/Preferences.vala:152
+msgid "Black"
+msgstr "Zwart"
+
+#: src/Widgets/Preferences.vala:153
+msgid "Pink"
+msgstr "Roze"
+
+#: src/Widgets/Preferences.vala:154
+msgid "Red"
+msgstr "Rood"
+
+#: src/Widgets/Preferences.vala:155
+msgid "Orange"
+msgstr "Oranje"
+
+#: src/Widgets/Preferences.vala:156
+msgid "Green"
+msgstr "Groen"
+
+#: src/Widgets/Preferences.vala:157
+msgid "Teal"
+msgstr "Groenblauw"
+
+#: src/Widgets/Preferences.vala:158
+msgid "Yellow"
+msgstr "Geel"
+
+#: src/Widgets/Preferences.vala:159
+msgid "Blue"
+msgstr "Blauw"
+
+#: src/Widgets/Preferences.vala:160
+msgid "Purple"
+msgstr "Paars"
+
+#: src/Widgets/Preferences.vala:161
+msgid "Coco"
+msgstr "Kokos"
+
+#: src/Widgets/Preferences.vala:162
+msgid "Blue to Green"
+msgstr "Blauw met groen"
+
+#: src/Widgets/Preferences.vala:163
+msgid "Purple to Red"
+msgstr "Paars met rood"
+
+#: src/Widgets/Preferences.vala:164
+msgid "Pride"
+msgstr "Trots"
+
+#: src/Widgets/Preferences.vala:165
+msgid "Transparent black"
+msgstr "Doorzichtig zwart"
+
+#: src/Widgets/Preferences.vala:166
+msgid "Transparent white"
+msgstr "Doorzichtig wit"
+
+#: src/Widgets/Preferences.vala:167
+msgid "Semi Transparent black"
+msgstr "Halfdoorzichtig zwart"
+
+#: src/Widgets/Preferences.vala:168
+msgid "Semi Transparent white"
+msgstr "Halfdoorzichtig wit"
