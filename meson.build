@@ -105,6 +105,7 @@ code_files = files(
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/MiniWindow.vala',
+    'src/Window.vala',
     'src/Services/Net.vala',
     'src/Services/Utils.vala',
     'src/Widgets/Preferences.vala',
