@@ -59,8 +59,11 @@ namespace nino {
 
         construct {
             set_keep_above (true);
+            var style_context = get_style_context ();
+            style_context.add_class ("preferences");
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
-            var label = new Label (_("Select a theme color"));
+            var label = new Gtk.Label (_("Select a theme color"));
+            label.get_style_context ().add_class ("close");
 
             btn_white = new Button();
             btn_white.name = Color.WHITE.to_string ();

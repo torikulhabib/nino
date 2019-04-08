@@ -39,6 +39,16 @@ public class nino.MainWindow : Window {
             return true;
         });
 
+        headerbar.pack_start (lock_button_widget ());
+        headerbar.pack_start (mini_button_widget ());
+        headerbar.pack_end (menu_button_widget ());
+        headerbar.pack_end (keep_button_widget ());
+
+        update_position (settings.window_x, settings.window_y);
+        show_all ();
+    }
+
+    private Gtk.Widget lock_button_widget () {
         lock_button = new Gtk.Button ();
         lock_button.tooltip_text = _("Desktop");
         lock_button.can_focus = false;
@@ -46,7 +56,11 @@ public class nino.MainWindow : Window {
             settings.lock_switch ();
             set_lock_symbol ();
         });
+        set_lock_symbol ();
+        return lock_button;
+    }
 
+    private Gtk.Widget keep_button_widget () {
         keep_button = new Gtk.Button ();
         keep_button.tooltip_text = _("Window");
         keep_button.can_focus = false;
@@ -54,10 +68,11 @@ public class nino.MainWindow : Window {
             settings.keep_switch ();
             set_keep_symbol ();
         });
-
-        set_lock_symbol ();
         set_keep_symbol ();
+        return keep_button;
+    }
 
+    private Gtk.Widget menu_button_widget () {
         var menu_button = new Gtk.Button.from_icon_name ("applications-graphics-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         menu_button.tooltip_text = _("Colors");
         menu_button.clicked.connect (() => {
@@ -70,7 +85,10 @@ public class nino.MainWindow : Window {
 
             preferences_dialog.present ();
         });
+        return menu_button;
+    }
 
+    private Gtk.Widget mini_button_widget () {
         var mini_button = new Gtk.Button.from_icon_name ("window-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         mini_button.tooltip_text = _("Mini Window");
         mini_button.clicked.connect (() => {
@@ -87,15 +105,9 @@ public class nino.MainWindow : Window {
 
             miniwindow.present ();
         });
-
-        headerbar.pack_start (lock_button);
-        headerbar.pack_start (mini_button);
-        headerbar.pack_end (menu_button);
-        headerbar.pack_end (keep_button);
-
-        update_position (settings.window_x, settings.window_y);
-        show_all ();
+        return mini_button;
     }
+
 
     private void set_lock_symbol () {
         switch (settings.lock_mode) {
@@ -193,10 +205,14 @@ public class nino.MainWindow : Window {
     }
 
     protected override Gtk.Grid content () {
-        var icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
+        icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
+        icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
 
         var upload_title = new Gtk.Label (_("Upload"));
         upload_title.hexpand = true;
+
+        var download_title = new Gtk.Label (_("Download"));
+        download_title.hexpand = true;
 
         var upload = new Gtk.Grid ();
         upload.row_spacing = 6;
@@ -204,11 +220,6 @@ public class nino.MainWindow : Window {
         upload.attach (icon_up, 0, 0, 1, 1);
         upload.attach (network_up_label, 0, 1, 1, 1);
         upload.attach (upload_title, 0, 2, 1, 1);
-
-        var icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
-
-        var download_title = new Gtk.Label (_("Download"));
-        download_title.hexpand = true;
 
         var download = new Gtk.Grid ();
         download.row_spacing = 6;

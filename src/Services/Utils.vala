@@ -26,7 +26,7 @@ public class Utils  : GLib.Object {
 
     construct { }
 
-    public static string format_net_speed (int bytes, bool round) {
+    public static string format_net_speed (int bytes) {
         string[] sizes = { " B/s", "KB/s", "MB/s", "GB/s", "TB/s" };
         double len = (double) bytes;
         int order = 0;
@@ -39,12 +39,17 @@ public class Utils  : GLib.Object {
             len = 0;
             order = 0;
         }
-        if(round == true){
+        if (order >= 2) {
+            if (len > 9 && len <= 99) {
+                speed = "%3.1f %s".printf(len, sizes[order]);
+            } else if (len > 99) {
+                speed = "%3.0f %s".printf(len, sizes[order]);
+            } else  {
+                speed = "%3.2f %s".printf(len, sizes[order]);
+            }
+        } else {
             speed = "%3.0f %s".printf(len, sizes[order]);
-        }else{
-            speed = "%3.2f %s".printf(len, sizes[order]);
         }
-
         return speed;
     }
 }

@@ -33,8 +33,10 @@
 .titlebar, .widget_background {
     background: @myColorPrimary;
 }
-
-.background {
+.preferences {
+    background: @myColorPrimary;
+}
+.nino {
     background: @myColorPrimary;
 }
 /*.csd {*/

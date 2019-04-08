@@ -32,7 +32,23 @@
 .close {
     color: @textColorPrimary;
 }
-
+.preferences {
+    background: linear-gradient(90deg,
+    #db002a,
+    #db002a 14.28%, 
+    #ff43aa 14.28%, 
+    #ff43aa 28.56%, 
+    #f47600 28.56%, 
+    #f47600 42.84%, 
+    #f4ca00 42.84%, 
+    #f4ca00 57.12%, 
+    #00b74b 57.12%,
+    #00b74b 72.4%, 
+    #435db6 72.4%, 
+    #435db6 86.68%, 
+    #68008b 86.68%, 
+    #68008b);
+}
 .titlebar, .widget_background {
     background: linear-gradient(90deg,
     #db002a,
@@ -51,7 +67,7 @@
     #68008b);
 }
 
-.background {
+.nino {
     background: linear-gradient(90deg,
     #db002a,
     #db002a 14.28%, 

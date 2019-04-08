@@ -35,7 +35,11 @@
     background: @myColorPrimary;
 }
 
-.background {
+.nino {
+    background: @myColorPrimary;
+}
+
+.preferences {
     background: @myColorPrimary;
 }
 

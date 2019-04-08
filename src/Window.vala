@@ -26,6 +26,9 @@ public abstract class nino.Window : Gtk.Window {
     protected Gtk.HeaderBar headerbar;
     protected Gtk.Label network_down_label;
     protected Gtk.Label network_up_label;
+    protected Gtk.Image icon_down;
+    protected Gtk.Image icon_up;
+
     private Net net;
 
     construct {
@@ -41,11 +44,8 @@ public abstract class nino.Window : Gtk.Window {
         network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
         network_down_label.hexpand = true;
 
-        close_button = new Gtk.Button.from_icon_name ("window-close-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        close_button.tooltip_text = _("Close");
-        close_button.clicked.connect (() => {
-            destroy ();
-        });
+        icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
+        icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
 
         var spinner = new Gtk.Spinner ();
         spinner.active = true;
@@ -63,7 +63,7 @@ public abstract class nino.Window : Gtk.Window {
 
         headerbar = new Gtk.HeaderBar ();
         headerbar.has_subtitle = false;
-        headerbar.pack_start (close_button);
+        headerbar.pack_start (close_button_widget ());
         this.set_titlebar (headerbar);
 
         var header_context = headerbar.get_style_context ();
@@ -71,6 +71,7 @@ public abstract class nino.Window : Gtk.Window {
         header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
         var style_context = get_style_context ();
+        style_context.add_class ("nino");
         style_context.add_class ("rounded");
         style_context.add_class ("widget_background");
         style_context.add_class ("flat");
@@ -89,14 +90,25 @@ public abstract class nino.Window : Gtk.Window {
         });
     }
 
+    private Gtk.Widget close_button_widget () {
+        close_button = new Gtk.Button.from_icon_name ("window-close-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        close_button.tooltip_text = _("Close");
+        close_button.clicked.connect (() => {
+            destroy ();
+        });
+        return close_button;
+    }
+
     protected void update_data () {
         var bytes = net.get_bytes ();
         update_net_speed (bytes[0], bytes[1]);
+        icon_up.sensitive = bytes [0].to_little_endian () == 0 ? false : true;
+        icon_down.sensitive = bytes [1].to_little_endian () == 0 ? false : true;
     }
 
     private void update_net_speed (int bytes_out, int bytes_in) {
-        network_up_label.set_label (Utils.format_net_speed (bytes_out, true));
-        network_down_label.set_label (Utils.format_net_speed (bytes_in, true));
+        network_up_label.set_label (Utils.format_net_speed (bytes_out));
+        network_down_label.set_label (Utils.format_net_speed (bytes_in));
     }
 
     protected void update_position (int x, int y) {

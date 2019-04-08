@@ -33,7 +33,10 @@
 .titlebar, .widget_background {
     background: linear-gradient(to right, #7b4397, #dc2430);
 }
-.background {
+.preferences {
+    background: linear-gradient(to right, #7b4397, #dc2430);
+}
+.nino {
     background: linear-gradient(to right, #7b4397, #dc2430);
 }
 /*.csd {*/

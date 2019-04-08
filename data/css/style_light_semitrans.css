@@ -33,8 +33,10 @@
 .titlebar, .widget_background {
     background: rgba (255,255,255,0.6);
 }
-
-.background {
+.preferences {
+    background: rgba (255,255,255,0.6);
+}
+.nino {
     background: rgba (255,255,255,0.6);
 }
 
