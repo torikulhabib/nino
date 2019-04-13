@@ -43,7 +43,7 @@ public class nino.MainWindow : Window {
         headerbar.pack_start (mini_button_widget ());
         headerbar.pack_end (menu_button_widget ());
         headerbar.pack_end (keep_button_widget ());
-
+        close_button_revealer.set_reveal_child (true);
         update_position (settings.window_x, settings.window_y);
         show_all ();
     }
@@ -72,22 +72,6 @@ public class nino.MainWindow : Window {
         return keep_button;
     }
 
-    private Gtk.Widget menu_button_widget () {
-        var menu_button = new Gtk.Button.from_icon_name ("applications-graphics-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        menu_button.tooltip_text = _("Colors");
-        menu_button.clicked.connect (() => {
-            debug ("Prefs button pressed.");
-            var preferences_dialog = new Preferences (this);
-            preferences_dialog.show_all ();
-            preferences_dialog.color_selected.connect ((color) => {
-                change_color (color);
-            });
-
-            preferences_dialog.present ();
-        });
-        return menu_button;
-    }
-
     private Gtk.Widget mini_button_widget () {
         var mini_button = new Gtk.Button.from_icon_name ("window-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         mini_button.tooltip_text = _("Mini Window");
@@ -107,7 +91,6 @@ public class nino.MainWindow : Window {
         });
         return mini_button;
     }
-
 
     private void set_lock_symbol () {
         switch (settings.lock_mode) {
@@ -147,61 +130,6 @@ public class nino.MainWindow : Window {
         settings.window_y = root_y;
 
         return base.configure_event (event);
-    }
-
-    private void change_color (string color) {
-        var css_provider = new Gtk.CssProvider ();
-        var url_css = Constants.URL_CSS_WHITE;
-
-        if (color == Color.WHITE.to_string ()) {
-            url_css = Constants.URL_CSS_WHITE;
-        } else if (color == Color.BLACK.to_string ()) {
-            url_css = Constants.URL_CSS_DARK;
-        } else if (color == Color.PINK.to_string ()) {
-            url_css = Constants.URL_CSS_PINK;
-        } else if (color == Color.RED.to_string ()) {
-            url_css = Constants.URL_CSS_RED;
-        } else if (color == Color.ORANGE.to_string ()) {
-            url_css = Constants.URL_CSS_ORANGE;
-        } else if (color == Color.YELLOW.to_string ()) {
-            url_css = Constants.URL_CSS_YELLOW;
-        } else if (color == Color.GREEN.to_string ()) {
-            url_css = Constants.URL_CSS_GREEN;
-        } else if (color == Color.TEAL.to_string ()) {
-            url_css = Constants.URL_CSS_TEAL;
-        } else if (color == Color.BLUE.to_string ()) {
-            url_css = Constants.URL_CSS_BLUE;
-        } else if (color == Color.PURPLE.to_string ()) {
-            url_css = Constants.URL_CSS_PURPLE;
-        } else if (color == Color.COCO.to_string ()) {
-            url_css = Constants.URL_CSS_COCO;
-        } else if (color == Color.GRADIENT_BLUE_GREEN.to_string ()) {
-            url_css = Constants.URL_CSS_GRADIENT_BLUE_GREEN;
-        } else if (color == Color.GRADIENT_PURPLE_RED.to_string ()) {
-            url_css = Constants.URL_CSS_GRADIENT_PURPLE_RED;
-        } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
-            url_css = Constants.URL_CSS_PRIDE;
-        } else if (color == Color.TRANS_WHITE.to_string ()) {
-            url_css = Constants.URL_CSS_LIGHT_TRANS;
-        } else if (color == Color.TRANS_BLACK.to_string ()) {
-            url_css = Constants.URL_CSS_DARK_TRANS;
-        } else if (color == Color.SEMITRANS_WHITE.to_string ()) {
-            url_css = Constants.URL_CSS_LIGHT_SEMITRANS;
-        } else if (color == Color.SEMITRANS_BLACK.to_string ()) {
-            url_css = Constants.URL_CSS_DARK_SEMITRANS;
-        } else {
-            settings.color = Color.WHITE.to_string ();
-            url_css = Constants.URL_CSS_WHITE;
-        }
-
-        settings.color = color;
-
-        css_provider.load_from_resource (url_css);
-        Gtk.StyleContext.add_provider_for_screen (
-            Gdk.Screen.get_default (),
-            css_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        );
     }
 
     protected override Gtk.Grid content () {

@@ -23,6 +23,7 @@ public class nino.MiniWindow : Window {
     private Gtk.Button mini_lock_button;
     private Gtk.Revealer main_revealer;
     private Gtk.Revealer lock_revealer;
+    private Gtk.Revealer menu_revealer;
 
     public MiniWindow (Gtk.Application application) {
         Object (
@@ -51,7 +52,12 @@ public class nino.MiniWindow : Window {
         lock_revealer.add (mini_lock_button_widget ());
         lock_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
 
-        headerbar.pack_end (main_revealer);
+        menu_revealer = new Gtk.Revealer ();
+        menu_revealer.add (menu_button_widget ());
+        menu_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_LEFT;
+
+        headerbar.pack_start (main_revealer);
+        headerbar.pack_end (menu_revealer);
         headerbar.pack_end (lock_revealer);
 
         update_position (settings.dialog_x, settings.dialog_y);
@@ -60,25 +66,27 @@ public class nino.MiniWindow : Window {
         event.connect (listen_to_window_events);
     }
 
-    bool listen_to_window_events (Gdk.Event event) {
-        if (event.type == Gdk.EventType.WINDOW_STATE) {
+    private bool listen_to_window_events (Gdk.Event event) {
             if (is_active) {
+                close_button_revealer.set_reveal_child (true);
+                menu_revealer.set_reveal_child (true);
                 lock_revealer.set_reveal_child (true);
                 main_revealer.set_reveal_child (true);
             } else {
+                close_button_revealer.set_reveal_child (false);
+                menu_revealer.set_reveal_child (false);
                 main_revealer.set_reveal_child (false);
                 lock_revealer.set_reveal_child (false);
             }
             mask_input ();
-        }
         return false;
     }
 
-    void mask_input () {
+    private void mask_input () {
         input_shape_combine_region (!is_active ? create_mask () : null);
     }
 
-    Cairo.Region create_mask () {
+    private Cairo.Region create_mask () {
         Cairo.RectangleInt rect_int;
         rect_int = {0, 0, 0, 0};
 

@@ -28,7 +28,7 @@ public abstract class nino.Window : Gtk.Window {
     protected Gtk.Label network_up_label;
     protected Gtk.Image icon_down;
     protected Gtk.Image icon_up;
-
+    protected Gtk.Revealer close_button_revealer;
     private Net net;
 
     construct {
@@ -61,9 +61,13 @@ public abstract class nino.Window : Gtk.Window {
 
         add (stack);
 
+        close_button_revealer = new Gtk.Revealer ();
+        close_button_revealer.add (close_button_widget ());
+        close_button_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
+
         headerbar = new Gtk.HeaderBar ();
         headerbar.has_subtitle = false;
-        headerbar.pack_start (close_button_widget ());
+        headerbar.pack_start (close_button_revealer);
         this.set_titlebar (headerbar);
 
         var header_context = headerbar.get_style_context ();
@@ -120,7 +124,7 @@ public abstract class nino.Window : Gtk.Window {
     private void update_view () {
         var connection_available = NetworkMonitor.get_default ().get_network_available ();
 
-        GLib.Timeout.add_seconds (0, () => {
+        GLib.Timeout.add_seconds (1, () => {
             if (connection_available) {
                 stack.visible_child_name = "main";
             } else {
@@ -130,7 +134,76 @@ public abstract class nino.Window : Gtk.Window {
             return false;
         });
     }
+    protected Gtk.Widget menu_button_widget () {
+        var menu_button = new Gtk.Button.from_icon_name ("applications-graphics-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        menu_button.tooltip_text = _("Colors");
+        menu_button.clicked.connect (() => {
+            debug ("Prefs button pressed.");
+            var preferences_dialog = new Preferences (this);
+            preferences_dialog.show_all ();
+            preferences_dialog.color_selected.connect ((color) => {
+                change_color (color);
+            });
 
+            preferences_dialog.present ();
+        });
+        return menu_button;
+    }
+
+    protected void change_color (string color) {
+        var css_provider = new Gtk.CssProvider ();
+        var url_css = Constants.URL_CSS_WHITE;
+
+        if (color == Color.WHITE.to_string ()) {
+            url_css = Constants.URL_CSS_WHITE;
+        } else if (color == Color.BLACK.to_string ()) {
+            url_css = Constants.URL_CSS_DARK;
+        } else if (color == Color.PINK.to_string ()) {
+            url_css = Constants.URL_CSS_PINK;
+        } else if (color == Color.RED.to_string ()) {
+            url_css = Constants.URL_CSS_RED;
+        } else if (color == Color.ORANGE.to_string ()) {
+            url_css = Constants.URL_CSS_ORANGE;
+        } else if (color == Color.YELLOW.to_string ()) {
+            url_css = Constants.URL_CSS_YELLOW;
+        } else if (color == Color.GREEN.to_string ()) {
+            url_css = Constants.URL_CSS_GREEN;
+        } else if (color == Color.TEAL.to_string ()) {
+            url_css = Constants.URL_CSS_TEAL;
+        } else if (color == Color.BLUE.to_string ()) {
+            url_css = Constants.URL_CSS_BLUE;
+        } else if (color == Color.PURPLE.to_string ()) {
+            url_css = Constants.URL_CSS_PURPLE;
+        } else if (color == Color.COCO.to_string ()) {
+            url_css = Constants.URL_CSS_COCO;
+        } else if (color == Color.GRADIENT_BLUE_GREEN.to_string ()) {
+            url_css = Constants.URL_CSS_GRADIENT_BLUE_GREEN;
+        } else if (color == Color.GRADIENT_PURPLE_RED.to_string ()) {
+            url_css = Constants.URL_CSS_GRADIENT_PURPLE_RED;
+        } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
+            url_css = Constants.URL_CSS_PRIDE;
+        } else if (color == Color.TRANS_WHITE.to_string ()) {
+            url_css = Constants.URL_CSS_LIGHT_TRANS;
+        } else if (color == Color.TRANS_BLACK.to_string ()) {
+            url_css = Constants.URL_CSS_DARK_TRANS;
+        } else if (color == Color.SEMITRANS_WHITE.to_string ()) {
+            url_css = Constants.URL_CSS_LIGHT_SEMITRANS;
+        } else if (color == Color.SEMITRANS_BLACK.to_string ()) {
+            url_css = Constants.URL_CSS_DARK_SEMITRANS;
+        } else {
+            settings.color = Color.WHITE.to_string ();
+            url_css = Constants.URL_CSS_WHITE;
+        }
+
+        settings.color = color;
+
+        css_provider.load_from_resource (url_css);
+        Gtk.StyleContext.add_provider_for_screen (
+            Gdk.Screen.get_default (),
+            css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        );
+    }
     // The main grid of the app
     protected abstract Gtk.Grid content ();
 
