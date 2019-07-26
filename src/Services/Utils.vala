@@ -20,37 +20,37 @@
  */
 
 namespace nino {
-public class Utils  : GLib.Object {
-    public Utils () {
-    }
-
-    construct { }
-
-    public static string format_net_speed (int bytes) {
-        string[] sizes = { " B/s", "KB/s", "MB/s", "GB/s", "TB/s" };
-        double len = (double) bytes;
-        int order = 0;
-        string speed = "";
-        while (len >= 1024 && order < sizes.length - 1) {
-            order++;
-            len = len/1024;
+    public class Utils  : GLib.Object {
+        public Utils () {
         }
-        if(bytes < 0){
-            len = 0;
-            order = 0;
-        }
-        if (order >= 2) {
-            if (len > 9 && len <= 99) {
-                speed = "%3.1f %s".printf(len, sizes[order]);
-            } else if (len > 99) {
-                speed = "%3.0f %s".printf(len, sizes[order]);
-            } else  {
-                speed = "%3.2f %s".printf(len, sizes[order]);
+
+        construct { }
+
+        public static string format_net_speed (int bytes) {
+            string[] sizes = { " B/s", "KB/s", "MB/s", "GB/s", "TB/s" };
+            double len = (double) bytes;
+            int order = 0;
+            string speed = "";
+            while (len >= 1024 && order < sizes.length - 1) {
+                order++;
+                len = len/1024;
             }
-        } else {
-            speed = "%3.0f %s".printf(len, sizes[order]);
+            if(bytes < 0){
+                len = 0;
+                order = 0;
+            }
+            if (order >= 2) {
+                if (len > 9 && len <= 99) {
+                    speed = "%3.1f %s".printf(len, sizes[order]);
+                } else if (len > 99) {
+                    speed = "%3.0f %s".printf(len, sizes[order]);
+                } else  {
+                    speed = "%3.2f %s".printf(len, sizes[order]);
+                }
+            } else {
+                speed = "%3.0f %s".printf(len, sizes[order]);
+            }
+            return speed;
         }
-        return speed;
     }
-}
 }
