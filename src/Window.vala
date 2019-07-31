@@ -21,11 +21,15 @@
 
 public abstract class nino.Window : Gtk.Window {
     protected nino.Configs.Settings settings;
+    private Preferences? preferences_dialog = null;
     private Gtk.Stack stack;
     protected Gtk.Button close_button;
     protected Gtk.HeaderBar headerbar;
     protected Gtk.Label network_down_label;
     protected Gtk.Label network_up_label;
+    protected Gtk.Label network_total_label;
+    protected Gtk.Image icon_down_total;
+    protected Gtk.Image icon_up_total;
     protected Gtk.Image icon_down;
     protected Gtk.Image icon_up;
     protected Gtk.Revealer close_button_revealer;
@@ -33,17 +37,21 @@ public abstract class nino.Window : Gtk.Window {
 
     construct {
         settings = nino.Configs.Settings.get_settings ();
-
         net = new Net ();
+        network_total_label = new Gtk.Label (StringPot.UpDown);
+        network_total_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        network_total_label.hexpand = true;
 
-        network_up_label = new Gtk.Label (_("UPLOAD"));
+        network_up_label = new Gtk.Label (StringPot.Upload);
         network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
         network_up_label.hexpand = true;
 
-        network_down_label = new Gtk.Label (_("DOWNLOAD"));
+        network_down_label = new Gtk.Label (StringPot.Download);
         network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
         network_down_label.hexpand = true;
 
+        icon_down_total = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
+        icon_up_total = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
         icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
         icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
 
@@ -74,11 +82,11 @@ public abstract class nino.Window : Gtk.Window {
         header_context.add_class ("default-decoration");
         header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
-        var style_context = get_style_context ();
-        style_context.add_class ("nino");
-        style_context.add_class ("rounded");
-        style_context.add_class ("widget_background");
-        style_context.add_class ("flat");
+        get_style_context ().add_class ("nino");
+        get_style_context ().add_class ("rounded");
+        get_style_context ().add_class ("widget_background");
+        get_style_context ().add_class ("title");
+        get_style_context ().add_class ("flat");
 
         NetworkMonitor.get_default ().network_changed.connect (update_view);
 
@@ -96,7 +104,7 @@ public abstract class nino.Window : Gtk.Window {
 
     private Gtk.Widget close_button_widget () {
         close_button = new Gtk.Button.from_icon_name ("window-close-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        close_button.tooltip_text = _("Close");
+        close_button.tooltip_text = StringPot.Close;
         close_button.clicked.connect (() => {
             destroy ();
         });
@@ -108,11 +116,14 @@ public abstract class nino.Window : Gtk.Window {
         update_net_speed (bytes[0], bytes[1]);
         icon_up.sensitive = bytes [0].to_little_endian () == 0 ? false : true;
         icon_down.sensitive = bytes [1].to_little_endian () == 0 ? false : true;
+        icon_up_total.sensitive = bytes [0].to_little_endian () == 0 ? false : true;
+        icon_down_total.sensitive = bytes [1].to_little_endian () == 0 ? false : true;
     }
 
     private void update_net_speed (int bytes_out, int bytes_in) {
         network_up_label.set_label (Utils.format_net_speed (bytes_out));
         network_down_label.set_label (Utils.format_net_speed (bytes_in));
+        network_total_label.set_label (Utils.format_net_speed (bytes_in + bytes_out)); 
     }
 
     protected void update_position (int x, int y) {
@@ -124,33 +135,35 @@ public abstract class nino.Window : Gtk.Window {
     private void update_view () {
         var connection_available = NetworkMonitor.get_default ().get_network_available ();
 
-        GLib.Timeout.add_seconds (1, () => {
+        GLib.Timeout.add (50, () => {
             if (connection_available) {
                 stack.visible_child_name = "main";
             } else {
                 stack.visible_child_name = "no_network";
             }
-
             return false;
         });
     }
     protected Gtk.Widget menu_button_widget () {
         var menu_button = new Gtk.Button.from_icon_name ("applications-graphics-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        menu_button.tooltip_text = _("Colors");
+        menu_button.tooltip_text = StringPot.Color;
         menu_button.clicked.connect (() => {
-            debug ("Prefs button pressed.");
-            var preferences_dialog = new Preferences (this);
-            preferences_dialog.show_all ();
-            preferences_dialog.color_selected.connect ((color) => {
-                change_color (color);
-            });
-
+            if (preferences_dialog == null) {
+                preferences_dialog = new Preferences (this);
+                preferences_dialog.show_all ();
+                preferences_dialog.color_selected.connect ((color) => {
+                    change_color (color);
+                });
+                preferences_dialog.destroy.connect (() => {
+                preferences_dialog = null;
+                });
+            }
             preferences_dialog.present ();
         });
         return menu_button;
     }
 
-    protected void change_color (string color) {
+    private void change_color (string color) {
         var css_provider = new Gtk.CssProvider ();
         var url_css = Constants.URL_CSS_WHITE;
 
@@ -182,10 +195,6 @@ public abstract class nino.Window : Gtk.Window {
             url_css = Constants.URL_CSS_GRADIENT_PURPLE_RED;
         } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
             url_css = Constants.URL_CSS_PRIDE;
-        } else if (color == Color.TRANS_WHITE.to_string ()) {
-            url_css = Constants.URL_CSS_LIGHT_TRANS;
-        } else if (color == Color.TRANS_BLACK.to_string ()) {
-            url_css = Constants.URL_CSS_DARK_TRANS;
         } else if (color == Color.SEMITRANS_WHITE.to_string ()) {
             url_css = Constants.URL_CSS_LIGHT_SEMITRANS;
         } else if (color == Color.SEMITRANS_BLACK.to_string ()) {

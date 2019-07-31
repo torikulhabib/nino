@@ -32,6 +32,10 @@ namespace nino.Configs {
         LOCK = 0,
         UNLOCK = 1
     }
+    public enum NetView {
+        DUAL = 0,
+        TOTAL = 1
+    }
 
     public class Settings : Granite.Services.Settings {
         private static Settings? settings;
@@ -42,6 +46,7 @@ namespace nino.Configs {
         public LockMode lock_mode { get; set; }
         public KeepMode keep_mode { get; set; }
         public MiniLockMode mini_lock_mode { get; set; }
+        public NetView net_view { get; set; }
         public string color { get; set; }
 
         private Settings () {
@@ -77,6 +82,17 @@ namespace nino.Configs {
                     break;
                 default:
                     settings.mini_lock_mode = MiniLockMode.LOCK;
+                    break;
+            }
+        }
+
+        public void net_switch () {
+            switch (settings.net_view) {
+                case NetView.DUAL:
+                    settings.net_view = NetView.TOTAL;
+                    break;
+                default:
+                    settings.net_view = NetView.DUAL;
                     break;
             }
         }

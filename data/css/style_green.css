@@ -24,27 +24,46 @@
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
+@define-color bg_highlight_color shade (rgba(0, 0, 0, 0), 1.4);
 
-@define-color bg_highlight_color shade (@myColorPrimary, 1.4);
-.close {
+.nino:backdrop.translucid-backdrop,
+.nino:backdrop.translucid-backdrop .titlebar {
     color: @textColorPrimary;
+    background: rgba(0, 0, 0, 0);
 }
+
+.nino:backdrop.translucid-backdrop .net_color {
+    border-width: 100px;
+    color: @textColorPrimary;
+    background: @myColorPrimary;
+}
+
+.nino,
+.nino, .widget_background {
+    color: @textColorPrimary;
+    transition: 300ms ease;
+    background: @myColorPrimary;
+}
+
 .titlebar, .widget_background {
     background: @myColorPrimary;
 }
-.preferences {
-    background: @myColorPrimary;
+
+.close {
+    color: @textColorPrimary;
+    background: rgba (0,0,0,0);
 }
-.nino {
+
+.preferences {
     background: @myColorPrimary;
 }
 
 /*.csd {*/
 window decoration {
-	box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.22);
+	box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,0);
 }
 
 /*.csd:backdrop {*/
 window decoration:backdrop {
-	box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 3px 6px rgba (0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 14px 28px rgba(0,0,0,0);
+	box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 3px 6px rgba (0,0,0,0), 0 3px 6px rgba(0,0,0,0), 0 14px 28px rgba(0,0,0,0);
 }

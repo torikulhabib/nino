@@ -64,135 +64,146 @@ msgstr "Widgetpositie opslaan."
 msgid "The choice is always above the screen or below."
 msgstr "De keuze is altijd erboven of eronder."
 
-#: src/MainWindow.vala:79
-msgid "Desktop"
-msgstr "Bureaublad"
+#: src/StringPot.vala:22
+msgid "UPNDOWND"
+msgstr ""
 
-#: src/MainWindow.vala:94
-msgid "Window"
-msgstr "Venster"
-
-#: src/MainWindow.vala:118
-msgid "Mini Window"
-msgstr "Mini-venster"
-
-#: src/MainWindow.vala:136 src/Widgets/Preferences.vala:204
-#: src/MiniWindow.vala:89
-msgid "Close"
-msgstr "Sluiten"
-
-#: src/MiniWindow.vala:71
-msgid "Position"
-msgstr "Positie"
-
-#: src/MainWindow.vala:222 src/MiniWindow.vala:187
-msgid "Network Is Not Available"
-msgstr "Geen netwerkverbinding"
-
-#: src/MainWindow.vala:280
-msgid "Connect to the Internet to Monitoring Network."
-msgstr "Maak verbinding met het internet om het te monitoren."
-
-#: src/MainWindow.vala:288
-msgid "Network Settings…"
-msgstr "Netwerkinstellingen…"
-
-#: src/MainWindow.vala:384 src/MiniWindow.vala:78
-msgid "UPLOAD"
-msgstr "UPLOAD"
-
-#: src/MainWindow.vala:389
+#: src/StringPot.vala:23
 msgid "Upload"
 msgstr "Upload"
 
-#: src/MainWindow.vala:404 src/MiniWindow.vala:83
-msgid "DOWNLOAD"
-msgstr "DOWNLOAD"
-
-#: src/MainWindow.vala:409
+#: src/StringPot.vala:24
 msgid "Download"
 msgstr "Download"
 
-#: src/MiniWindow.vala:80
+#: src/StringPot.vala:25
+msgid "Close"
+msgstr "Sluiten"
+
+#: src/StringPot.vala:26
+msgid "Color"
+msgstr ""
+
+#: src/StringPot.vala:27
+msgid "Main Window"
+msgstr ""
+
+#: src/StringPot.vala:28
+msgid "Mini Window"
+msgstr "Mini-venster"
+
+#: src/StringPot.vala:29
+msgid "Total"
+msgstr ""
+
+#: src/StringPot.vala:30
+msgid "Dual"
+msgstr ""
+
+#: src/StringPot.vala:31
+msgid "Lock"
+msgstr ""
+
+#: src/StringPot.vala:32
+msgid "Unlock"
+msgstr ""
+
+#: src/StringPot.vala:33
 msgid "Upload Speed"
 msgstr "Uploadsnelheid"
 
-#: src/MiniWindow.vala:86
+#: src/StringPot.vala:34
 msgid "Download Speed"
 msgstr "Downloadsnelheid"
 
-#: src/Widgets/Preferences.vala:63
-msgid "Select a theme color"
-msgstr "Kies een themakleur"
+#: src/StringPot.vala:35
+msgid "Network Is Not Available"
+msgstr "Geen netwerkverbinding"
 
-#: src/Widgets/Preferences.vala:151
+#: src/StringPot.vala:36
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: src/StringPot.vala:37
+msgid "Above"
+msgstr ""
+
+#: src/StringPot.vala:38
+msgid "Below"
+msgstr ""
+
+#: src/StringPot.vala:39
+msgid "Connect to the Internet to Monitoring Network."
+msgstr "Maak verbinding met het internet om het te monitoren."
+
+#: src/StringPot.vala:40
+msgid "Network Settings…"
+msgstr "Netwerkinstellingen…"
+
+#: src/StringPot.vala:41
 msgid "White"
 msgstr "Wit"
 
-#: src/Widgets/Preferences.vala:152
+#: src/StringPot.vala:42
 msgid "Black"
 msgstr "Zwart"
 
-#: src/Widgets/Preferences.vala:153
-msgid "Pink"
-msgstr "Roze"
-
-#: src/Widgets/Preferences.vala:154
+#: src/StringPot.vala:43
 msgid "Red"
 msgstr "Rood"
 
-#: src/Widgets/Preferences.vala:155
-msgid "Orange"
-msgstr "Oranje"
-
-#: src/Widgets/Preferences.vala:156
-msgid "Green"
-msgstr "Groen"
-
-#: src/Widgets/Preferences.vala:157
-msgid "Teal"
-msgstr "Groenblauw"
-
-#: src/Widgets/Preferences.vala:158
-msgid "Yellow"
-msgstr "Geel"
-
-#: src/Widgets/Preferences.vala:159
+#: src/StringPot.vala:44
 msgid "Blue"
 msgstr "Blauw"
 
-#: src/Widgets/Preferences.vala:160
+#: src/StringPot.vala:45
+msgid "Orange"
+msgstr "Oranje"
+
+#: src/StringPot.vala:46
+msgid "Green"
+msgstr "Groen"
+
+#: src/StringPot.vala:47
+msgid "Teal"
+msgstr "Groenblauw"
+
+#: src/StringPot.vala:48
+msgid "Pink"
+msgstr "Roze"
+
+#: src/StringPot.vala:49
+msgid "Yellow"
+msgstr "Geel"
+
+#: src/StringPot.vala:50
 msgid "Purple"
 msgstr "Paars"
 
-#: src/Widgets/Preferences.vala:161
+#: src/StringPot.vala:51
 msgid "Coco"
 msgstr "Kokos"
 
-#: src/Widgets/Preferences.vala:162
+#: src/StringPot.vala:52
 msgid "Blue to Green"
 msgstr "Blauw met groen"
 
-#: src/Widgets/Preferences.vala:163
+#: src/StringPot.vala:53
 msgid "Purple to Red"
 msgstr "Paars met rood"
 
-#: src/Widgets/Preferences.vala:164
+#: src/StringPot.vala:54
 msgid "Pride"
 msgstr "Trots"
 
-#: src/Widgets/Preferences.vala:165
-msgid "Transparent black"
-msgstr "Doorzichtig zwart"
-
-#: src/Widgets/Preferences.vala:166
-msgid "Transparent white"
-msgstr "Doorzichtig wit"
-
-#: src/Widgets/Preferences.vala:167
+#: src/StringPot.vala:55
 msgid "Semi Transparent black"
 msgstr "Halfdoorzichtig zwart"
 
-#: src/Widgets/Preferences.vala:168
+#: src/StringPot.vala:56
 msgid "Semi Transparent white"
 msgstr "Halfdoorzichtig wit"
+
+#: src/StringPot.vala:57
+msgid "Select a theme color"
+msgstr "Kies een themakleur"

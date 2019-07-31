@@ -25,174 +25,185 @@ msgstr "Nino"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:8
 #: data/com.github.torikulhabib.nino.desktop.in.in:4
-msgid "A network monitor widget"
-msgstr "Sebuah wijet monitor jaringan"
+msgid "A Widgets network monitor"
+msgstr "Sebuah Wijet jaringan Monitor"
 
 #: data/com.github.torikulhabib.nino.desktop.in.in:5
 msgid "Network Monitor"
-msgstr "Monitor Jaringan"
+msgstr "Jaringan Monitor"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "An internet speed monitor apps."
-msgstr "Aplikasi monitor kecepatan internet."
+msgid "An internet speed monitor."
+msgstr "Monitor kecepatan sebuah internet "
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:11
 msgid "Features:"
-msgstr "Fitur:"
+msgstr "Fitur"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:13
 msgid "Small window application features"
-msgstr "Fitur aplikasi jendela kecil"
+msgstr "Aplikasi kecil"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:14
 msgid "Alert when no internet connection is connected."
-msgstr "Pemberitahuan saat tidak ada koneksi internet terhubung."
+msgstr "Ingatkan bila tidak ada sambungan internet yang terhubung."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:15
 msgid "Many color theme choices available."
-msgstr "Banyak pilihan tema warna yang tersedia."
+msgstr "Banyak warna tema yang tersedia. "
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:16
 msgid "Lock position on the desktop."
-msgstr "Kunci Posisi di desktop."
+msgstr "Kunci Posisi pada layar"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:17
 msgid "Save the position of the widget."
-msgstr "Simpan posisi wijet."
+msgstr "Simpan posisi wijet"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:18
 msgid "The choice is always above the screen or below."
-msgstr "Pilihan selalu di atas layar atau di bawah."
+msgstr "Pilihan selalu diatas atau dibawah"
 
-#: src/MainWindow.vala:79
-msgid "Desktop"
-msgstr "Layar Komputer"
+#: src/StringPot.vala:22
+msgid "UPNDOWND"
+msgstr ""
 
-#: src/MainWindow.vala:94
-msgid "Window"
-msgstr "Jendela"
+#: src/StringPot.vala:23
+msgid "Upload"
+msgstr "Mengunggah"
 
-#: src/MainWindow.vala:118
-msgid "Mini Window"
-msgstr "Jendela Kecil"
+#: src/StringPot.vala:24
+msgid "Download"
+msgstr "Mengunduh"
 
-#: src/MainWindow.vala:136 src/Widgets/Preferences.vala:204
-#: src/MiniWindow.vala:89
+#: src/StringPot.vala:25
 msgid "Close"
 msgstr "Tutup"
 
-#: src/MiniWindow.vala:71
-msgid "Position"
-msgstr "Posisi"
+#: src/StringPot.vala:26
+msgid "Color"
+msgstr "Warna"
 
-#: src/MainWindow.vala:222 src/MiniWindow.vala:187
-msgid "Network Is Not Available"
-msgstr "Jaringan Tidak Tersedia"
+#: src/StringPot.vala:27
+msgid "Main Window"
+msgstr "Mini Window"
 
-#: src/MainWindow.vala:280
-msgid "Connect to the Internet to Monitoring Network."
-msgstr "Sambungkan ke Internet untuk Memantau Jaringan."
+#: src/StringPot.vala:28
+msgid "Mini Window"
+msgstr "Layar Utama"
 
-#: src/MainWindow.vala:288
-msgid "Network Settings…"
-msgstr "Pengaturan jaringan…"
+#: src/StringPot.vala:29
+msgid "Total"
+msgstr "Total"
 
-#: src/MainWindow.vala:384 src/MiniWindow.vala:78
-msgid "UPLOAD"
-msgstr "UNGGAH"
+#: src/StringPot.vala:30
+msgid "Dual"
+msgstr "Ganda"
 
-#: src/MainWindow.vala:389
-msgid "Upload"
-msgstr "Unggah"
+#: src/StringPot.vala:31
+msgid "Lock"
+msgstr "Kunci"
 
-#: src/MainWindow.vala:404 src/MiniWindow.vala:83
-msgid "DOWNLOAD"
-msgstr "UNDUH"
+#: src/StringPot.vala:32
+msgid "Unlock"
+msgstr "Buka kunci"
 
-#: src/MainWindow.vala:409
-msgid "Download"
-msgstr "Unduh"
-
-#: src/MiniWindow.vala:80
+#: src/StringPot.vala:33
 msgid "Upload Speed"
 msgstr "Kecepatan Unggah"
 
-#: src/MiniWindow.vala:86
+#: src/StringPot.vala:34
 msgid "Download Speed"
-msgstr "Kecepatan unduh"
+msgstr "Kecepatan mengunduh"
 
-#: src/Widgets/Preferences.vala:63
-msgid "Select a theme color"
-msgstr "Pilih sebuah warna tema"
+#: src/StringPot.vala:35
+msgid "Network is not available"
+msgstr "Jaringan tidak tersedia"
 
-#: src/Widgets/Preferences.vala:151
+#: src/StringPot.vala:36
+msgid "Desktop"
+msgstr "Layar"
+
+#: src/StringPot.vala:37
+msgid "Above"
+msgstr "Atas"
+
+#: src/StringPot.vala:38
+msgid "Below"
+msgstr "Bawah"
+
+#: src/StringPot.vala:39
+msgid "Connect to the Internet to monitor network."
+msgstr "Sambungkan ke internet untuk memonitor"
+
+#: src/StringPot.vala:40
+msgid "Network Settings…"
+msgstr "Pengaturan Jaringan"
+
+#: src/StringPot.vala:41
 msgid "White"
 msgstr "Putih"
 
-#: src/Widgets/Preferences.vala:152
+#: src/StringPot.vala:42
 msgid "Black"
 msgstr "Hitam"
 
-#: src/Widgets/Preferences.vala:153
-msgid "Pink"
-msgstr "Merah Muda"
-
-#: src/Widgets/Preferences.vala:154
+#: src/StringPot.vala:43
 msgid "Red"
 msgstr "Merah"
 
-#: src/Widgets/Preferences.vala:155
-msgid "Orange"
-msgstr "Oranye"
-
-#: src/Widgets/Preferences.vala:156
-msgid "Green"
-msgstr "Hijau"
-
-#: src/Widgets/Preferences.vala:157
-msgid "Teal"
-msgstr "Hijau Muda"
-
-#: src/Widgets/Preferences.vala:158
-msgid "Yellow"
-msgstr "Kuning"
-
-#: src/Widgets/Preferences.vala:159
+#: src/StringPot.vala:44
 msgid "Blue"
 msgstr "Biru"
 
-#: src/Widgets/Preferences.vala:160
+#: src/StringPot.vala:45
+msgid "Orange"
+msgstr "Oranye"
+
+#: src/StringPot.vala:46
+msgid "Green"
+msgstr "Hijau"
+
+#: src/StringPot.vala:47
+msgid "Teal"
+msgstr "Titik "
+
+#: src/StringPot.vala:48
+msgid "Pink"
+msgstr "Merah Muda"
+
+#: src/StringPot.vala:49
+msgid "Yellow"
+msgstr "Kuning"
+
+#: src/StringPot.vala:50
 msgid "Purple"
 msgstr "Ungu"
 
-#: src/Widgets/Preferences.vala:161
+#: src/StringPot.vala:51
 msgid "Coco"
-msgstr "Kelapa"
+msgstr "Coklat"
 
-#: src/Widgets/Preferences.vala:162
+#: src/StringPot.vala:52
 msgid "Blue to Green"
 msgstr "Biru ke Hijau"
 
-#: src/Widgets/Preferences.vala:163
+#: src/StringPot.vala:53
 msgid "Purple to Red"
 msgstr "Ungu ke Merah"
 
-#: src/Widgets/Preferences.vala:164
+#: src/StringPot.vala:54
 msgid "Pride"
-msgstr "Kebanggan"
+msgstr "Campuran"
 
-#: src/Widgets/Preferences.vala:165
-msgid "Transparent black"
-msgstr "Transparan gelap"
-
-#: src/Widgets/Preferences.vala:166
-msgid "Transparent white"
-msgstr "Transparan putih"
-
-#: src/Widgets/Preferences.vala:167
+#: src/StringPot.vala:55
 msgid "Semi Transparent black"
-msgstr "Semi transparan hitam"
+msgstr "Semi Transparan hitam"
 
-#: src/Widgets/Preferences.vala:168
+#: src/StringPot.vala:56
 msgid "Semi Transparent white"
-msgstr "Semi transparan putih"
+msgstr "semi Transparent putih"
+
+#: src/StringPot.vala:57
+msgid "Select a theme color"
+msgstr "Pilih Warna"

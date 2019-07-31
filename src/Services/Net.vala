@@ -41,8 +41,6 @@ public class Net : GLib.Object {
         ret = {_bytes_out, _bytes_in};
         return ret;
     }
-    public signal void signal_upload (bool up);
-    public signal void signal_download (bool down);
     private void update_bytes_total () {
         GTop.NetList netlist;
         GTop.NetLoad netload;

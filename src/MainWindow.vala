@@ -38,7 +38,11 @@ public class nino.MainWindow : Window {
             update_data ();
             return true;
         });
-
+        Timeout.add (50, () => {
+            set_lock_symbol ();
+            set_keep_symbol ();
+            return false;
+        });
         headerbar.pack_start (lock_button_widget ());
         headerbar.pack_start (mini_button_widget ());
         headerbar.pack_end (menu_button_widget ());
@@ -50,7 +54,7 @@ public class nino.MainWindow : Window {
 
     private Gtk.Widget lock_button_widget () {
         lock_button = new Gtk.Button ();
-        lock_button.tooltip_text = _("Desktop");
+        lock_button.tooltip_text = StringPot.Desktop;
         lock_button.can_focus = false;
         lock_button.clicked.connect (() => {
             settings.lock_switch ();
@@ -62,7 +66,6 @@ public class nino.MainWindow : Window {
 
     private Gtk.Widget keep_button_widget () {
         keep_button = new Gtk.Button ();
-        keep_button.tooltip_text = _("Window");
         keep_button.can_focus = false;
         keep_button.clicked.connect (() => {
             settings.keep_switch ();
@@ -74,9 +77,8 @@ public class nino.MainWindow : Window {
 
     private Gtk.Widget mini_button_widget () {
         var mini_button = new Gtk.Button.from_icon_name ("window-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        mini_button.tooltip_text = _("Mini Window");
+        mini_button.tooltip_text = StringPot.MiniWindow;
         mini_button.clicked.connect (() => {
-            debug ("MiniWindow button pressed.");
             var miniwindow = new MiniWindow (application);
             miniwindow.show_all ();
             hide_on_delete ();
@@ -96,12 +98,14 @@ public class nino.MainWindow : Window {
         switch (settings.lock_mode) {
             case nino.Configs.LockMode.LOCK :
                 lock_button.image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-                stick ();
+                lock_button.tooltip_text = StringPot.Lock;
                 type_hint = Gdk.WindowTypeHint.DESKTOP;
                 update_position (settings.window_x, settings.window_y);
+                stick ();
                 break;
             case nino.Configs.LockMode.UNLOCK :
                 lock_button.image = new Gtk.Image.from_icon_name ("changes-allow-symbolic", Gtk.IconSize.BUTTON);
+                lock_button.tooltip_text = StringPot.Unlock;
                 type_hint = Gdk.WindowTypeHint.DIALOG;
                 unstick ();
                 break;
@@ -112,11 +116,13 @@ public class nino.MainWindow : Window {
         switch (settings.keep_mode) {
             case nino.Configs.KeepMode.ABOVE :
                 keep_button.image = new Gtk.Image.from_icon_name ("go-top-symbolic", Gtk.IconSize.BUTTON);
+                keep_button.tooltip_text = StringPot.Above;
                 set_keep_above (true);
                 set_keep_below (false);
                 break;
             case nino.Configs.KeepMode.BELOW :
                 keep_button.image = new Gtk.Image.from_icon_name ("go-bottom-symbolic", Gtk.IconSize.BUTTON);
+                keep_button.tooltip_text = StringPot.Below;
                 set_keep_above (false);
                 set_keep_below (true);
                 break;
@@ -136,10 +142,10 @@ public class nino.MainWindow : Window {
         icon_up = new Gtk.Image.from_icon_name ("go-up-symbolic", Gtk.IconSize.MENU);
         icon_down = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);
 
-        var upload_title = new Gtk.Label (_("Upload"));
+        var upload_title = new Gtk.Label (StringPot.Upload);
         upload_title.hexpand = true;
 
-        var download_title = new Gtk.Label (_("Download"));
+        var download_title = new Gtk.Label (StringPot.Download);
         download_title.hexpand = true;
 
         var upload = new Gtk.Grid ();
@@ -168,7 +174,7 @@ public class nino.MainWindow : Window {
     }
 
     protected override Gtk.Grid no_network_conection () {
-        var title_label = new Gtk.Label (_("Network is Not Available"));
+        var title_label = new Gtk.Label (StringPot.NetworkNotAvailable);
         title_label.hexpand = true;
         title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
         title_label.max_width_chars = 40;
@@ -176,7 +182,7 @@ public class nino.MainWindow : Window {
         title_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
         title_label.xalign = 0;
 
-        var description_label = new Gtk.Label (_("Connect to the Internet to monitor network."));
+        var description_label = new Gtk.Label (StringPot.Connectto);
         description_label.hexpand = true;
         description_label.max_width_chars = 40;
         description_label.wrap = true;
@@ -184,7 +190,7 @@ public class nino.MainWindow : Window {
         description_label.xalign = 0;
         description_label.valign = Gtk.Align.START;
 
-        var action_button = new Gtk.Button.with_label (_("Network Settings…"));
+        var action_button = new Gtk.Button.with_label (StringPot.NetworkSettings);
         action_button.halign = Gtk.Align.END;
         action_button.get_style_context ().add_class ("AlertView");
         action_button.margin_top = 2;

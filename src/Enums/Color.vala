@@ -32,8 +32,6 @@ namespace nino {
         GRADIENT_BLUE_GREEN,
         GRADIENT_PURPLE_RED,
         GRADIENT_PRIDE,
-        TRANS_WHITE,
-        TRANS_BLACK,
         SEMITRANS_WHITE,
         SEMITRANS_BLACK;
 
@@ -53,8 +51,6 @@ namespace nino {
                 case GRADIENT_BLUE_GREEN:   return "gradient_blue_green";
                 case GRADIENT_PURPLE_RED:   return "gradient_purple_red";
                 case GRADIENT_PRIDE:        return "gradient_pride";
-                case TRANS_WHITE:           return "transparent_white";
-                case TRANS_BLACK:           return "transparent_black";
                 case SEMITRANS_WHITE:       return "semitransparent_white";
                 case SEMITRANS_BLACK:       return "semitransparent_black";
                 default:                    assert_not_reached ();
@@ -77,8 +73,6 @@ namespace nino {
                 case "gradient_blue_green":   return Constants.URL_CSS_GRADIENT_BLUE_GREEN;
                 case "gradient_purple_red":   return Constants.URL_CSS_GRADIENT_PURPLE_RED;
                 case "gradient_pride":        return Constants.URL_CSS_PRIDE;
-                case "transparent_white":     return Constants.URL_CSS_LIGHT_TRANS;
-                case "transparent_black":     return Constants.URL_CSS_DARK_TRANS;
                 case "semitransparent_white": return Constants.URL_CSS_LIGHT_SEMITRANS;
                 case "semitransparent_black": return Constants.URL_CSS_DARK_SEMITRANS;
                 default:                      return Constants.URL_CSS_WHITE;

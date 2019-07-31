@@ -62,135 +62,142 @@ msgstr "Enregistrez la position du widget."
 msgid "The choice is always above the screen or below."
 msgstr "Le choix est toujours au-dessus de l'écran ou en dessous."
 
-#: src/MainWindow.vala:79
-msgid "Desktop"
-msgstr "Bureau"
-
-#: src/MainWindow.vala:94
-msgid "Window"
-msgstr "Fenêtre"
-
-#: src/MainWindow.vala:118
-msgid "Mini Window"
-msgstr "Petite fenêtre"
-
-#: src/MainWindow.vala:136 src/Widgets/Preferences.vala:204
-#: src/MiniWindow.vala:89
-msgid "Close"
-msgstr "Fermer"
-
-#: src/MiniWindow.vala:71
-msgid "Position"
-msgstr "Position"
-
-#: src/MainWindow.vala:222 src/MiniWindow.vala:187
-msgid "Network Is Not Available"
-msgstr "Réseau indisponible"
-
-#: src/MainWindow.vala:280
-msgid "Connect to the Internet to Monitoring Network."
-msgstr "Connectez-vous à Internet pour surveiller le réseau."
-
-#: src/MainWindow.vala:288
-msgid "Network Settings…"
-msgstr "Paramètres réseau…"
-
-#: src/MainWindow.vala:384 src/MiniWindow.vala:78
-msgid "UPLOAD"
-msgstr "TRANSFERT"
-
-#: src/MainWindow.vala:389
+#: src/StringPot.vala:23
 msgid "Upload"
 msgstr "Transfert"
 
-#: src/MainWindow.vala:404 src/MiniWindow.vala:83
-msgid "DOWNLOAD"
-msgstr "TELECHARGEMENT"
-
-#: src/MainWindow.vala:409
+#: src/StringPot.vala:24
 msgid "Download"
 msgstr "Téléchargement"
 
-#: src/MiniWindow.vala:80
+#: src/StringPot.vala:25
+msgid "Close"
+msgstr ""
+
+#: src/StringPot.vala:26
+msgid "Color"
+msgstr ""
+
+#: src/StringPot.vala:27
+msgid "Main Window"
+msgstr ""
+
+#: src/StringPot.vala:28
+msgid "Mini Window"
+msgstr "Petite fenêtre"
+
+#: src/StringPot.vala:29
+msgid "Total"
+msgstr ""
+
+#: src/StringPot.vala:30
+msgid "Dual"
+msgstr ""
+
+#: src/StringPot.vala:31
+msgid "Lock"
+msgstr ""
+
+#: src/StringPot.vala:32
+msgid "Unlock"
+msgstr ""
+
+#: src/StringPot.vala:33
 msgid "Upload Speed"
 msgstr "Vitesse de transfert"
 
-#: src/MiniWindow.vala:86
+#: src/StringPot.vala:34
 msgid "Download Speed"
 msgstr "Vitesse de téléchargement"
 
-#: src/Widgets/Preferences.vala:63
-msgid "Select a theme color"
-msgstr "Séléctionnez une couleur de thème"
+#: src/StringPot.vala:35
+msgid "Network is not available"
+msgstr "Réseau indisponible"
 
-#: src/Widgets/Preferences.vala:151
+#: src/StringPot.vala:36
+msgid "Desktop"
+msgstr "Bureau"
+
+#: src/StringPot.vala:37
+msgid "Above"
+msgstr ""
+
+#: src/StringPot.vala:38
+msgid "Below"
+msgstr ""
+
+#: src/StringPot.vala:39
+msgid "Connect to the Internet to monitor network."
+msgstr "Connectez-vous à Internet pour surveiller le réseau."
+
+#: src/StringPot.vala:40
+msgid "Network Settings…"
+msgstr ""
+
+#: src/StringPot.vala:41
 msgid "White"
 msgstr "Blanc"
 
-#: src/Widgets/Preferences.vala:152
+#: src/StringPot.vala:42
 msgid "Black"
 msgstr "Noir"
 
-#: src/Widgets/Preferences.vala:153
-msgid "Pink"
-msgstr "Rose"
-
-#: src/Widgets/Preferences.vala:154
+#: src/StringPot.vala:43
 msgid "Red"
 msgstr "Rouge"
 
-#: src/Widgets/Preferences.vala:155
+#: src/StringPot.vala:44
+msgid "Blue"
+msgstr ""
+
+#: src/StringPot.vala:45
 msgid "Orange"
 msgstr "Orange"
 
-#: src/Widgets/Preferences.vala:156
+#: src/StringPot.vala:46
 msgid "Green"
 msgstr "Vert"
 
-#: src/Widgets/Preferences.vala:157
+#: src/StringPot.vala:47
 msgid "Teal"
 msgstr "Bleu sarcelle"
 
-#: src/Widgets/Preferences.vala:158
+#: src/StringPot.vala:48
+msgid "Pink"
+msgstr "Rose"
+
+#: src/StringPot.vala:49
 msgid "Yellow"
 msgstr "Jaune"
 
-#: src/Widgets/Preferences.vala:159
-msgid "Blue"
-msgstr "Bleu"
-
-#: src/Widgets/Preferences.vala:160
+#: src/StringPot.vala:50
 msgid "Purple"
 msgstr "Violet"
 
-#: src/Widgets/Preferences.vala:161
+#: src/StringPot.vala:51
 msgid "Coco"
 msgstr "Coco"
 
-#: src/Widgets/Preferences.vala:162
+#: src/StringPot.vala:52
 msgid "Blue to Green"
 msgstr "De bleu à vert"
 
-#: src/Widgets/Preferences.vala:163
+#: src/StringPot.vala:53
 msgid "Purple to Red"
 msgstr "De violet à rouge"
 
-#: src/Widgets/Preferences.vala:164
+#: src/StringPot.vala:54
 msgid "Pride"
 msgstr "Multicolore"
 
-#: src/Widgets/Preferences.vala:165
-msgid "Transparent black"
-msgstr "Noir transparent"
-
-#: src/Widgets/Preferences.vala:166
-msgid "Transparent white"
-msgstr "Blanc transparent"
-
-#: src/Widgets/Preferences.vala:167
+#: src/StringPot.vala:55
 msgid "Semi Transparent black"
 msgstr "Noir translucide"
 
-#: src/Widgets/Preferences.vala:168
+#: src/StringPot.vala:56
 msgid "Semi Transparent white"
 msgstr "Blanc translucide"
+
+#: src/StringPot.vala:57
+msgid "Select a theme color"
+msgstr "Séléctionnez une couleur de thème"

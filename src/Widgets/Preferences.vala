@@ -38,8 +38,6 @@ namespace nino {
         private Button btn_blue_green;
         private Button btn_purple_red;
         private Button btn_pride;
-        private Button btn_trans_white;
-        private Button btn_trans_black;
         private Button btn_semitrans_white;
         private Button btn_semitrans_black;
 
@@ -62,7 +60,7 @@ namespace nino {
             var style_context = get_style_context ();
             style_context.add_class ("preferences");
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
-            var label = new Gtk.Label (_("Select a theme color"));
+            var label = new Gtk.Label (StringPot.SelectColor);
             label.get_style_context ().add_class ("close");
 
             btn_white = new Button();
@@ -93,10 +91,6 @@ namespace nino {
             btn_purple_red.name = Color.GRADIENT_PURPLE_RED.to_string ();
             btn_pride = new Button();
             btn_pride.name = Color.GRADIENT_PRIDE.to_string ();
-            btn_trans_white  = new Button();
-            btn_trans_white.name = Color.TRANS_WHITE.to_string ();
-            btn_trans_black  = new Button();
-            btn_trans_black.name = Color.TRANS_BLACK.to_string ();
             btn_semitrans_white  = new Button();
             btn_semitrans_white.name = Color.SEMITRANS_WHITE.to_string ();
             btn_semitrans_black  = new Button();
@@ -117,8 +111,6 @@ namespace nino {
             buttons.append(btn_blue_green);
             buttons.append(btn_purple_red);
             buttons.append(btn_pride);
-            buttons.append(btn_trans_white);
-            buttons.append(btn_trans_black);
             buttons.append(btn_semitrans_white);
             buttons.append(btn_semitrans_black);
 
@@ -146,29 +138,25 @@ namespace nino {
             btn_blue_green.get_style_context ().add_class ("btn_gradient_blue_green");
             btn_purple_red.get_style_context ().add_class ("btn_gradient_purple_red");
             btn_pride.get_style_context ().add_class ("btn_gradient_pride");
-            btn_trans_black.get_style_context ().add_class ("btn_trans_dark");
-            btn_trans_white.get_style_context ().add_class ("btn_trans_white");
             btn_semitrans_black.get_style_context ().add_class ("btn_semitrans_dark");
             btn_semitrans_white.get_style_context ().add_class ("btn_semitrans_white");
 
-            btn_white.set_tooltip_text (_("White"));
-            btn_black.set_tooltip_text (_("Black"));
-            btn_pink.set_tooltip_text (_("Pink"));
-            btn_red.set_tooltip_text (_("Red"));
-            btn_orange.set_tooltip_text (_("Orange"));
-            btn_green.set_tooltip_text (_("Green"));
-            btn_teal.set_tooltip_text (_("Teal"));
-            btn_yellow.set_tooltip_text (_("Yellow"));
-            btn_blue.set_tooltip_text (_("Blue"));
-            btn_purple.set_tooltip_text (_("Purple"));
-            btn_coco.set_tooltip_text (_("Coco"));
-            btn_blue_green.set_tooltip_text (_("Blue to Green"));
-            btn_purple_red.set_tooltip_text (_("Purple to Red"));
-            btn_pride.set_tooltip_text (_("Pride"));
-            btn_trans_black.set_tooltip_text (_("Transparent black"));
-            btn_trans_white.set_tooltip_text (_("Transparent white"));
-            btn_semitrans_black.set_tooltip_text (_("Semi Transparent black"));
-            btn_semitrans_white.set_tooltip_text (_("Semi Transparent white"));
+            btn_white.set_tooltip_text (StringPot.White);
+            btn_black.set_tooltip_text (StringPot.Black);
+            btn_pink.set_tooltip_text (StringPot.Pink);
+            btn_red.set_tooltip_text (StringPot.Red);
+            btn_orange.set_tooltip_text (StringPot.Orange);
+            btn_green.set_tooltip_text (StringPot.Green);
+            btn_teal.set_tooltip_text (StringPot.Teal);
+            btn_yellow.set_tooltip_text (StringPot.Yellow);
+            btn_blue.set_tooltip_text (StringPot.Blue);
+            btn_purple.set_tooltip_text (StringPot.Purple);
+            btn_coco.set_tooltip_text (StringPot.Coco);
+            btn_blue_green.set_tooltip_text (StringPot.BlueToGreen);
+            btn_purple_red.set_tooltip_text (StringPot.PurpleToRed);
+            btn_pride.set_tooltip_text (StringPot.Pride);
+            btn_semitrans_black.set_tooltip_text (StringPot.SemiTransBlack);
+            btn_semitrans_white.set_tooltip_text (StringPot.SemiTransWhite);
 
             var main_grid = new Gtk.Grid ();
             main_grid.margin = 8;
@@ -194,17 +182,15 @@ namespace nino {
             main_grid.attach (btn_blue_green, 5, 4, 1, 1);
             main_grid.attach (btn_purple_red, 0, 5, 1, 1);
             main_grid.attach (btn_pride,      1, 5, 1, 1);
-            main_grid.attach (btn_trans_white,2, 5, 1, 1);
-            main_grid.attach (btn_trans_black,3, 5, 1, 1);
-            main_grid.attach (btn_semitrans_white, 4, 5, 1, 1);
-            main_grid.attach (btn_semitrans_black, 5, 5, 1, 1);
+            main_grid.attach (btn_semitrans_white, 2, 5, 1, 1);
+            main_grid.attach (btn_semitrans_black, 3, 5, 1, 1);
 
             var content = get_content_area () as Gtk.Box;
             content.margin = 6;
             content.margin_top = 0;
             content.add (main_grid);
 
-            var close_button = add_button (_("Close"), Gtk.ResponseType.CLOSE);
+            var close_button = add_button (StringPot.Close, Gtk.ResponseType.CLOSE);
             close_button.get_style_context ().add_class ("close");
             ((Gtk.Button) close_button).clicked.connect (() => destroy ());
 

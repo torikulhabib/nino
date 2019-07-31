@@ -16,6 +16,10 @@
     <value nick="normal" value="0" />
     <value nick="mini" value="1" />
   </enum>
+  <enum id="com.github.torikulhabib.nino.net-view">
+    <value nick="dual" value="0" />
+    <value nick="total" value="1" />
+  </enum>
 	<schema path="/com/github/torikulhabib/nino/" id="com.github.torikulhabib.nino" gettext-domain="com.github.torikulhabib.nino">
     <key name="window-x" type="i">
       <default>-1</default>
@@ -52,6 +56,10 @@
 			<summary>Lock mode.</summary>
 			<description>Lock mode.</description>
 		</key>
+    <key name="window-out-of-focus-translucid" type="b">
+      <default>true</default>
+      <summary>Set window's opacity low when it goes out of focus</summary>
+    </key>
     <key name="color" type="s">
       <default>"white"</default>
       <summary>Most recent color theme of Nino</summary>
@@ -59,6 +67,10 @@
     </key>
     <key name="window-mode" enum="com.github.torikulhabib.nino.window-mode">
       <default>"normal"</default>
+      <summary>Set window's opacity low when it goes out of focus</summary>
+    </key>
+    <key name="net-view" enum="com.github.torikulhabib.nino.net-view">
+      <default>"dual"</default>
       <summary>Window mode</summary>
       <description>Most recent window mode of Nino</description>
     </key>
