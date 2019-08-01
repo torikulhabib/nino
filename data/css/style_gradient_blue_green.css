@@ -21,7 +21,6 @@
 @import url("/com/github/torikulhabib/nino/css/colors.css");
 @import url("/com/github/torikulhabib/nino/css/color_buttons.css");
 
-@define-color myColorPrimary #03B1A6;
 @define-color textColorPrimary @white_clear;
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);
@@ -34,20 +33,20 @@
 }
 
 .nino:backdrop.translucid-backdrop .net_color {
-    border-width: 100px;
     color: @textColorPrimary;
-    background: linear-gradient(to right, #00f260, #0575e6);
+    border-radius: 1%;
+    background: linear-gradient(to right, rgba (0, 242, 96, 0.6), rgba (5, 117, 230, 0.6));
 }
 
 .nino,
 .nino, .widget_background {
     color: @textColorPrimary;
     transition: 300ms ease;
-    background: linear-gradient(to right, #00f260, #0575e6);
+    background: linear-gradient(to right, rgba (0, 242, 96, 1), rgba (5, 117, 230, 1));
 }
 
 .titlebar, .widget_background {
-    background: linear-gradient(to right, #00f260, #0575e6);
+    background: linear-gradient(to right, rgba (0, 242, 96, 1), rgba (5, 117, 230, 1));
 }
 
 .close {
@@ -56,15 +55,15 @@
 }
 
 .preferences {
-    background: linear-gradient(to right, #00f260, #0575e6);
+    background: linear-gradient(to right, rgba (0, 242, 96, 1), rgba (5, 117, 230, 1));
 }
 
 /*.csd {*/
 window decoration {
-	box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 14px 28px rgba(0,0,0,0), 0 10px 10px rgba(0,0,0,0);
+	box-shadow: 0 0 0 1px rgba (0,0,0,0), 0 14px 28px rgba (0,0,0,0), 0 10px 10px rgba (0,0,0,0);
 }
 
 /*.csd:backdrop {*/
 window decoration:backdrop {
-	box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 3px 6px rgba (0,0,0,0), 0 3px 6px rgba(0,0,0,0), 0 14px 28px rgba(0,0,0,0);
+	box-shadow: 0 0 0 1px rgba (0,0,0,0), 0 3px 6px rgba (0,0,0,0), 0 3px 6px rgba (0,0,0,0), 0 14px 28px rgba (0,0,0,0);
 }

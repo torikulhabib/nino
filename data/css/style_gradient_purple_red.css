@@ -34,20 +34,20 @@
 }
 
 .nino:backdrop.translucid-backdrop .net_color {
-    border-width: 100px;
     color: @textColorPrimary;
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    border-radius: 1%;
+    background: linear-gradient(to right, rgba(123, 67, 151, 0.7), rgba(220, 36, 48, 0.7));
 }
 
 .nino,
 .nino, .widget_background {
     color: @textColorPrimary;
     transition: 300ms ease;
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    background: linear-gradient(to right, rgba(123, 67, 151, 1), rgba(220, 36, 48, 1));
 }
 
 .titlebar, .widget_background {
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    background: linear-gradient(to right, rgba(123, 67, 151, 1), rgba(220, 36, 48, 1));
 }
 
 .close {
@@ -56,7 +56,7 @@
 }
 
 .preferences {
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    background: linear-gradient(to right, rgba(123, 67, 151, 1), rgba(220, 36, 48, 1));
 }
 
 /*.csd {*/

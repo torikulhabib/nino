@@ -17,20 +17,19 @@
 * 
 */
 
-@define-color nino_white #FAFAFA;
-@define-color nino_black #1A1A1A;
-@define-color nino_red #C6262E;
-@define-color nino_pink #db36a4;
-@define-color nino_orange #F37329;
-@define-color nino_yellow #F9C440;
-@define-color nino_green #68B723;
-@define-color nino_teal #018B7F;
-@define-color nino_blue #3689E6;
-@define-color nino_purple #7239b3;
-@define-color nino_coco #715344;
-
-@define-color white_clear #FFFFFF;
-@define-color black_dark #000000;
+@define-color nino_white    rgba (250,250,250,1);
+@define-color nino_black    rgba (26,26,26,1);
+@define-color nino_red      rgba (198,38,46,1);
+@define-color nino_pink     rgba (219,54,164,1);
+@define-color nino_orange   rgba (243,115,41,1);
+@define-color nino_yellow   rgba (249,196,64,1);
+@define-color nino_green    rgba (104,183,35,1);
+@define-color nino_teal     rgba (1,139,127,1);
+@define-color nino_blue     rgba (54,137,230,1);
+@define-color nino_purple   rgba (114,57,179,1);
+@define-color nino_coco     rgba (113,83,68,1); 
+@define-color white_clear   rgba (255,255,255,1);
+@define-color black_dark    rgba (0,0,0,1);
 
 /* @define-color nino_gradient_blue_green linear-gradient(to right, #00F160, #0575E4);
 @define-color nino_gradient_purple_red linear-gradient(to right, #7B4396, #DB2430);

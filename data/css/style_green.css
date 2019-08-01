@@ -33,9 +33,9 @@
 }
 
 .nino:backdrop.translucid-backdrop .net_color {
-    border-width: 100px;
     color: @textColorPrimary;
-    background: @myColorPrimary;
+    border-radius: 1%;
+    background: rgba (104, 183, 35, 0.7);
 }
 
 .nino,

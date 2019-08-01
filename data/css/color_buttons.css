@@ -65,43 +65,29 @@
 
 
 .btn_gradient_blue_green {
-    background: linear-gradient(to right, #00F160, #0575E4);
+    background: linear-gradient(to right, rgba(0, 242, 96, 1), rgba(5, 117, 230, 1));
 }
 
 .btn_gradient_purple_red {
-    background: linear-gradient(to right, #7B4396, #DB2430);
+    background: linear-gradient(to right, rgba(123, 67, 151, 1), rgba(220, 36, 48, 1));
 }
 
 .btn_gradient_pride {
     background: linear-gradient(90deg,
-    #db002a,
-    #db002a 14.28%, 
-    #ff43aa 14.28%, 
-    #ff43aa 28.56%, 
-    #f47600 28.56%, 
-    #f47600 42.84%, 
-    #f4ca00 42.84%, 
-    #f4ca00 57.12%, 
-    #00b74b 57.12%,
-    #00b74b 72.4%, 
-    #435db6 72.4%, 
-    #435db6 86.68%, 
-    #68008b 86.68%, 
-    #68008b);
-}
-
-.btn_trans_dark {
-    background-image: linear-gradient(90deg, #000000 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #000000 50%, #000000 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
-    background-clip: border-box;
-    background-size: 10px 10px;
-}
-
-.btn_trans_white {
-    background-image: linear-gradient(90deg, #ffffff 33.33%, #e6e6e6 33.33%, #e6e6e6 50%, #ffffff 50%, #ffffff 83.33%, #e6e6e6 83.33%, #e6e6e6 100%);
-    background-position: 0 0, 5px 5px;
-    background-origin: padding-box;
-    background-clip: border-box;
-    background-size: 10px 10px;
+    rgba (219, 0, 42, 1),
+    rgba (219, 0, 42, 1)    14.28%, 
+    rgba (255, 67, 170, 1)  14.28%, 
+    rgba (255, 67, 170, 1)  28.56%, 
+    rgba (214, 118, 0, 1)   28.56%, 
+    rgba (214, 118, 0, 1)   42.84%, 
+    rgba (244, 202, 0, 1)   42.84%, 
+    rgba (244, 202, 0, 1)   57.12%, 
+    rgba (0, 183, 5, 1)     57.12%,
+    rgba (0, 183, 5, 1)     72.4%, 
+    rgba (67, 93, 182, 1)   72.4%, 
+    rgba (67, 93, 182, 1)   86.68%, 
+    rgba (104, 0, 139, 1)   86.68%, 
+    rgba (104, 0, 139, 1)   );
 }
 
 .btn_semitrans_dark {

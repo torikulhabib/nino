@@ -230,6 +230,7 @@ public class nino.MiniWindow : Window {
         up_down_grid.column_spacing = 0;
         up_down_grid.margin_top = 0;
         up_down_grid.column_homogeneous = true;
+        up_down_grid.valign = Gtk.Align.CENTER;
         up_down_grid.add (up_grid);
         up_down_grid.add (down_grid);
         updown_revealer = new Gtk.Revealer ();
@@ -243,6 +244,7 @@ public class nino.MiniWindow : Window {
         total_grid.row_spacing = 0;
         total_grid.column_spacing = 0;
         total_grid.margin_top = 0;
+        total_grid.valign = Gtk.Align.CENTER;
         total_grid.add (icon_up_total);
         total_grid.add (icon_down_total);
         total_grid.add (network_total_label);
@@ -254,8 +256,8 @@ public class nino.MiniWindow : Window {
         stack.add_named (total_grid, "total");
 
         var main_grid = new Gtk.Grid ();
-        main_grid.margin = 4;
-        main_grid.row_spacing = 4;
+        main_grid.margin = 0;
+        main_grid.row_spacing = 0;
         main_grid.column_spacing = 0;
         main_grid.margin_top = 0;
         main_grid.valign = Gtk.Align.CENTER;
