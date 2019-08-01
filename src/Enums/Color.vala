@@ -51,7 +51,8 @@ namespace nino {
                 case GRADIENT_BLUE_GREEN:   return "gradient_blue_green";
                 case GRADIENT_PURPLE_RED:   return "gradient_purple_red";
                 case GRADIENT_PRIDE:        return "gradient_pride";
-                case SEMITRANS_WHITE:       return "semitransparent_white";
+                case GRADIENT_RED_PINK:     return "gradient_red_pink";
+                case GRADIENT_ORANGE_YELLOW:return "gradient_orange_yellow";
                 default:                    assert_not_reached ();
             }
         }
@@ -73,7 +74,7 @@ namespace nino {
                 case "gradient_purple_red":   return Constants.URL_CSS_GRADIENT_PURPLE_RED;
                 case "gradient_pride":        return Constants.URL_CSS_PRIDE;
                 case "gradient_red_pink":     return Constants.URL_CSS_GRADIENT_RED_PINK;
-                case "gradient_orange_yellow": return Constants.URL_CSS_GRADIENT_ORANGE_YELLOW;
+                case "gradient_orange_yellow":return Constants.URL_CSS_GRADIENT_ORANGE_YELLOW;
                 default:                      return Constants.URL_CSS_WHITE;
             }
         }
