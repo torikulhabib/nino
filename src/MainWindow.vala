@@ -192,7 +192,7 @@ public class nino.MainWindow : Window {
 
         var action_button = new Gtk.Button.with_label (StringPot.NetworkSettings);
         action_button.halign = Gtk.Align.END;
-        action_button.get_style_context ().add_class ("AlertView");
+        action_button.get_style_context ().add_class ("string_color");
         action_button.margin_top = 2;
         action_button.margin_bottom = 2;
 

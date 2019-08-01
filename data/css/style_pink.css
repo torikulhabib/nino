@@ -50,7 +50,7 @@
     background: @myColorPrimary;
 }
 
-.close {
+.string_color {
     color: @textColorPrimary;
     background: rgba (0,0,0,0);
 }

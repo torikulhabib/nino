@@ -91,7 +91,7 @@
     rgba (104, 0, 139, 1)   );
 }
 
-.close {
+.string_color {
     color: @textColorPrimary;
     background: rgba (0,0,0,0);
 }

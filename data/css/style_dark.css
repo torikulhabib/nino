@@ -50,16 +50,12 @@
     background: @myColorPrimary;
 }
 
-.close {
+.string_color {
     color: @textColorPrimary;
     background: rgba (0,0,0,0);
 }
 
 .preferences {
-    background: @myColorPrimary;
-}
-
-.nino {
     background: @myColorPrimary;
 }
 

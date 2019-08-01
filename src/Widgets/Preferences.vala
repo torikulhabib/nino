@@ -61,7 +61,7 @@ namespace nino {
             style_context.add_class ("preferences");
             var img = new Image.from_icon_name ("preferences-color" , IconSize.DIALOG);
             var label = new Gtk.Label (StringPot.SelectColor);
-            label.get_style_context ().add_class ("close");
+            label.get_style_context ().add_class ("string_color");
 
             btn_white = new Button();
             btn_white.name = Color.WHITE.to_string ();
@@ -191,7 +191,7 @@ namespace nino {
             content.add (main_grid);
 
             var close_button = add_button (StringPot.Close, Gtk.ResponseType.CLOSE);
-            close_button.get_style_context ().add_class ("close");
+            close_button.get_style_context ().add_class ("string_color");
             ((Gtk.Button) close_button).clicked.connect (() => destroy ());
 
             button_press_event.connect ((e) => {
