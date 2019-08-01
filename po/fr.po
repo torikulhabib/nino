@@ -191,12 +191,12 @@ msgid "Pride"
 msgstr "Multicolore"
 
 #: src/StringPot.vala:55
-msgid "Semi Transparent black"
-msgstr "Noir translucide"
+msgid "Red to Pink"
+msgstr ""
 
 #: src/StringPot.vala:56
-msgid "Semi Transparent white"
-msgstr "Blanc translucide"
+msgid "Orange to Yellow"
+msgstr ""
 
 #: src/StringPot.vala:57
 msgid "Select a theme color"

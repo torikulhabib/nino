@@ -21,7 +21,6 @@
 @import url("/com/github/torikulhabib/nino/css/colors.css");
 @import url("/com/github/torikulhabib/nino/css/color_buttons.css");
 
-@define-color myColorPrimary #68b723;
 @define-color textColorPrimary @black_dark;
 @define-color colorAccent @white_clear;
 @define-color colorAccentTransparent rgba(0,0,0,0.1);

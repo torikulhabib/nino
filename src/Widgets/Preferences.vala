@@ -38,8 +38,8 @@ namespace nino {
         private Button btn_blue_green;
         private Button btn_purple_red;
         private Button btn_pride;
-        private Button btn_semitrans_white;
-        private Button btn_semitrans_black;
+        private Button btn_red_pink;
+        private Button btn_orange_yellow;
 
         private const int BTN_SIZE = 25;
         public signal void color_selected (string color);
@@ -91,10 +91,10 @@ namespace nino {
             btn_purple_red.name = Color.GRADIENT_PURPLE_RED.to_string ();
             btn_pride = new Button();
             btn_pride.name = Color.GRADIENT_PRIDE.to_string ();
-            btn_semitrans_white  = new Button();
-            btn_semitrans_white.name = Color.SEMITRANS_WHITE.to_string ();
-            btn_semitrans_black  = new Button();
-            btn_semitrans_black.name = Color.SEMITRANS_BLACK.to_string ();
+            btn_red_pink  = new Button();
+            btn_red_pink.name = Color.GRADIENT_RED_PINK.to_string ();
+            btn_orange_yellow  = new Button();
+            btn_orange_yellow.name = Color.GRADIENT_ORANGE_YELLOW.to_string ();
 
             List<Button> buttons = new List<Button> ();
             buttons.append(btn_white);
@@ -111,8 +111,8 @@ namespace nino {
             buttons.append(btn_blue_green);
             buttons.append(btn_purple_red);
             buttons.append(btn_pride);
-            buttons.append(btn_semitrans_white);
-            buttons.append(btn_semitrans_black);
+            buttons.append(btn_red_pink);
+            buttons.append(btn_orange_yellow);
 
             foreach (var btn in buttons) {
                 btn.get_style_context ().add_class ("button_colors");
@@ -138,8 +138,8 @@ namespace nino {
             btn_blue_green.get_style_context ().add_class ("btn_gradient_blue_green");
             btn_purple_red.get_style_context ().add_class ("btn_gradient_purple_red");
             btn_pride.get_style_context ().add_class ("btn_gradient_pride");
-            btn_semitrans_black.get_style_context ().add_class ("btn_semitrans_dark");
-            btn_semitrans_white.get_style_context ().add_class ("btn_semitrans_white");
+            btn_orange_yellow.get_style_context ().add_class ("btn_orange_yellow");
+            btn_red_pink.get_style_context ().add_class ("btn_red_pink");
 
             btn_white.set_tooltip_text (StringPot.White);
             btn_black.set_tooltip_text (StringPot.Black);
@@ -155,8 +155,8 @@ namespace nino {
             btn_blue_green.set_tooltip_text (StringPot.BlueToGreen);
             btn_purple_red.set_tooltip_text (StringPot.PurpleToRed);
             btn_pride.set_tooltip_text (StringPot.Pride);
-            btn_semitrans_black.set_tooltip_text (StringPot.SemiTransBlack);
-            btn_semitrans_white.set_tooltip_text (StringPot.SemiTransWhite);
+            btn_orange_yellow.set_tooltip_text (StringPot.OrangeToYellow);
+            btn_red_pink.set_tooltip_text (StringPot.RedToPink);
 
             var main_grid = new Gtk.Grid ();
             main_grid.margin = 8;
@@ -181,9 +181,9 @@ namespace nino {
             main_grid.attach (btn_coco,       4, 4, 1, 1);
             main_grid.attach (btn_blue_green, 5, 4, 1, 1);
             main_grid.attach (btn_purple_red, 0, 5, 1, 1);
-            main_grid.attach (btn_pride,      1, 5, 1, 1);
-            main_grid.attach (btn_semitrans_white, 2, 5, 1, 1);
-            main_grid.attach (btn_semitrans_black, 3, 5, 1, 1);
+            main_grid.attach (btn_orange_yellow, 1, 5, 1, 1);
+            main_grid.attach (btn_red_pink, 2, 5, 1, 1);
+            main_grid.attach (btn_pride, 3, 5, 1, 1);
 
             var content = get_content_area () as Gtk.Box;
             content.margin = 6;

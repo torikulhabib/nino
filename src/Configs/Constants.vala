@@ -48,7 +48,7 @@ namespace nino {
         public abstract const string URL_CSS_PRIDE = "/com/github/torikulhabib/nino/css/style_gradient_pride.css";
         public abstract const string URL_CSS_LIGHT_TRANS = "/com/github/torikulhabib/nino/css/style_light_transparent.css";
         public abstract const string URL_CSS_DARK_TRANS = "/com/github/torikulhabib/nino/css/style_dark_transparent.css";
-        public abstract const string URL_CSS_LIGHT_SEMITRANS = "/com/github/torikulhabib/nino/css/style_light_semitrans.css";
-        public abstract const string URL_CSS_DARK_SEMITRANS = "/com/github/torikulhabib/nino/css/style_dark_semitrans.css";
+        public abstract const string URL_CSS_GRADIENT_RED_PINK = "/com/github/torikulhabib/nino/css/style_gradient_red_pink.css";
+        public abstract const string URL_CSS_GRADIENT_ORANGE_YELLOW = "/com/github/torikulhabib/nino/css/style_gradient_orange_yellow.css";
     }
 }
