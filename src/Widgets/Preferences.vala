@@ -37,7 +37,7 @@ namespace nino {
         private Button btn_coco;
         private Button btn_blue_green;
         private Button btn_purple_red;
-        private Button btn_pride;
+        private Button btn_rainbow;
         private Button btn_red_pink;
         private Button btn_orange_yellow;
 
@@ -89,8 +89,8 @@ namespace nino {
             btn_blue_green.name = Color.GRADIENT_BLUE_GREEN.to_string ();
             btn_purple_red = new Button();
             btn_purple_red.name = Color.GRADIENT_PURPLE_RED.to_string ();
-            btn_pride = new Button();
-            btn_pride.name = Color.GRADIENT_PRIDE.to_string ();
+            btn_rainbow = new Button();
+            btn_rainbow.name = Color.GRADIENT_RAINBOW.to_string ();
             btn_red_pink  = new Button();
             btn_red_pink.name = Color.GRADIENT_RED_PINK.to_string ();
             btn_orange_yellow  = new Button();
@@ -110,7 +110,7 @@ namespace nino {
             buttons.append(btn_coco);
             buttons.append(btn_blue_green);
             buttons.append(btn_purple_red);
-            buttons.append(btn_pride);
+            buttons.append(btn_rainbow);
             buttons.append(btn_red_pink);
             buttons.append(btn_orange_yellow);
 
@@ -137,7 +137,7 @@ namespace nino {
             btn_coco.get_style_context ().add_class ("btn_coco");
             btn_blue_green.get_style_context ().add_class ("btn_gradient_blue_green");
             btn_purple_red.get_style_context ().add_class ("btn_gradient_purple_red");
-            btn_pride.get_style_context ().add_class ("btn_gradient_pride");
+            btn_rainbow.get_style_context ().add_class ("btn_gradient_pride");
             btn_orange_yellow.get_style_context ().add_class ("btn_orange_yellow");
             btn_red_pink.get_style_context ().add_class ("btn_red_pink");
 
@@ -154,7 +154,7 @@ namespace nino {
             btn_coco.set_tooltip_text (StringPot.Coco);
             btn_blue_green.set_tooltip_text (StringPot.BlueToGreen);
             btn_purple_red.set_tooltip_text (StringPot.PurpleToRed);
-            btn_pride.set_tooltip_text (StringPot.Pride);
+            btn_rainbow.set_tooltip_text (StringPot.Rainbow);
             btn_orange_yellow.set_tooltip_text (StringPot.OrangeToYellow);
             btn_red_pink.set_tooltip_text (StringPot.RedToPink);
 
@@ -165,25 +165,24 @@ namespace nino {
             main_grid.margin_top = 0;
             main_grid.column_homogeneous = true;
 
-            main_grid.attach (img,            0, 0, 6, 1);
-            main_grid.attach (label,          0, 1, 6, 1);
-
-            main_grid.attach (btn_white,      0, 3, 1, 1);
-            main_grid.attach (btn_black,      1, 3, 1, 1);
-            main_grid.attach (btn_pink,       2, 3, 1, 1);
-            main_grid.attach (btn_red,        3, 3, 1, 1);
-            main_grid.attach (btn_orange,     4, 3, 1, 1);
-            main_grid.attach (btn_yellow,     5, 3, 1, 1);
-            main_grid.attach (btn_green,      0, 4, 1, 1);
-            main_grid.attach (btn_teal,       1, 4, 1, 1);
-            main_grid.attach (btn_blue,       2, 4, 1, 1);
-            main_grid.attach (btn_purple,     3, 4, 1, 1);
-            main_grid.attach (btn_coco,       4, 4, 1, 1);
-            main_grid.attach (btn_blue_green, 5, 4, 1, 1);
-            main_grid.attach (btn_purple_red, 0, 5, 1, 1);
-            main_grid.attach (btn_orange_yellow, 1, 5, 1, 1);
-            main_grid.attach (btn_red_pink, 2, 5, 1, 1);
-            main_grid.attach (btn_pride, 3, 5, 1, 1);
+            main_grid.attach (img,                0, 0, 6, 1);
+            main_grid.attach (label,              0, 1, 6, 1);
+            main_grid.attach (btn_white,          0, 3, 1, 1);
+            main_grid.attach (btn_black,          1, 3, 1, 1);
+            main_grid.attach (btn_pink,           2, 3, 1, 1);
+            main_grid.attach (btn_red,            3, 3, 1, 1);
+            main_grid.attach (btn_orange,         4, 3, 1, 1);
+            main_grid.attach (btn_yellow,         5, 3, 1, 1);
+            main_grid.attach (btn_green,          0, 4, 1, 1);
+            main_grid.attach (btn_teal,           1, 4, 1, 1);
+            main_grid.attach (btn_blue,           2, 4, 1, 1);
+            main_grid.attach (btn_purple,         3, 4, 1, 1);
+            main_grid.attach (btn_coco,           4, 4, 1, 1);
+            main_grid.attach (btn_blue_green,     5, 4, 1, 1);
+            main_grid.attach (btn_purple_red,     0, 5, 1, 1);
+            main_grid.attach (btn_orange_yellow,  1, 5, 1, 1);
+            main_grid.attach (btn_red_pink,       2, 5, 1, 1);
+            main_grid.attach (btn_rainbow,        3, 5, 1, 1);
 
             var content = get_content_area () as Gtk.Box;
             content.margin = 6;

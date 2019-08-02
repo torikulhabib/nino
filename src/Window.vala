@@ -193,8 +193,8 @@ public abstract class nino.Window : Gtk.Window {
             url_css = Constants.URL_CSS_GRADIENT_BLUE_GREEN;
         } else if (color == Color.GRADIENT_PURPLE_RED.to_string ()) {
             url_css = Constants.URL_CSS_GRADIENT_PURPLE_RED;
-        } else if (color == Color.GRADIENT_PRIDE.to_string ()) {
-            url_css = Constants.URL_CSS_PRIDE;
+        } else if (color == Color.GRADIENT_RAINBOW.to_string ()) {
+            url_css = Constants.URL_CSS_RAINBOW;
         } else if (color == Color.GRADIENT_RED_PINK.to_string ()) {
             url_css = Constants.URL_CSS_GRADIENT_RED_PINK;
         } else if (color == Color.GRADIENT_ORANGE_YELLOW.to_string ()) {

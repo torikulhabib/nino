@@ -31,7 +31,7 @@ namespace nino {
         COCO,
         GRADIENT_BLUE_GREEN,
         GRADIENT_PURPLE_RED,
-        GRADIENT_PRIDE,
+        GRADIENT_RAINBOW,
         GRADIENT_RED_PINK,
         GRADIENT_ORANGE_YELLOW;
 
@@ -50,7 +50,7 @@ namespace nino {
                 case COCO:                  return "coco";
                 case GRADIENT_BLUE_GREEN:   return "gradient_blue_green";
                 case GRADIENT_PURPLE_RED:   return "gradient_purple_red";
-                case GRADIENT_PRIDE:        return "gradient_pride";
+                case GRADIENT_RAINBOW:      return "gradient_rainbow";
                 case GRADIENT_RED_PINK:     return "gradient_red_pink";
                 case GRADIENT_ORANGE_YELLOW:return "gradient_orange_yellow";
                 default:                    assert_not_reached ();
@@ -72,7 +72,7 @@ namespace nino {
                 case "coco":                  return Constants.URL_CSS_COCO;
                 case "gradient_blue_green":   return Constants.URL_CSS_GRADIENT_BLUE_GREEN;
                 case "gradient_purple_red":   return Constants.URL_CSS_GRADIENT_PURPLE_RED;
-                case "gradient_pride":        return Constants.URL_CSS_PRIDE;
+                case "gradient_rainbow":      return Constants.URL_CSS_RAINBOW;
                 case "gradient_red_pink":     return Constants.URL_CSS_GRADIENT_RED_PINK;
                 case "gradient_orange_yellow":return Constants.URL_CSS_GRADIENT_ORANGE_YELLOW;
                 default:                      return Constants.URL_CSS_WHITE;

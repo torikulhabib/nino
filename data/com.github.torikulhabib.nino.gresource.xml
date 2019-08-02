@@ -17,7 +17,7 @@
         <file alias="style_coco.css" compressed="true">css/style_coco.css</file>
         <file alias="style_gradient_blue_green.css" compressed="true">css/style_gradient_blue_green.css</file>
         <file alias="style_gradient_purple_red.css" compressed="true">css/style_gradient_purple_red.css</file>
-        <file alias="style_gradient_pride.css" compressed="true">css/style_gradient_pride.css</file>
+        <file alias="style_gradient_rainbow.css" compressed="true">css/style_gradient_rainbow.css</file>
         <file alias="style_gradient_orange_yellow.css" compressed="true">css/style_gradient_orange_yellow.css</file>
         <file alias="style_gradient_red_pink.css" compressed="true">css/style_gradient_red_pink.css</file>
     </gresource>

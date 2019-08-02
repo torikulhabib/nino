@@ -20,18 +20,6 @@
 namespace nino {
 
     public class Constants {
-        public abstract const string ID = "com.github.torikulhabib.nino";
-        public abstract const string VERSION = "1.2.0";
-        public abstract const string PROGRAME_NAME = "nino";
-        public abstract const string APP_YEARS = "2018";
-        public abstract const string APP_ICON = "com.github.torikulhabib.nino";
-        public abstract const string ABOUT_COMMENTS = "A Widget Network Speeed";
-        public abstract const string TRANSLATOR_CREDITS = "Translators";
-        public abstract const string MAIN_URL = "https://github.com/torikulhabib/nino";
-        public abstract const string BUG_URL = "https://github.com/torikulhabib/nino/issues";
-        public abstract const string [] ABOUT_AUTHORS = { "torik.habib@gmail.com" };
-        public abstract const Gtk.License ABOUT_LICENSE_TYPE = Gtk.License.CUSTOM;
-
         public abstract const string URL_CSS_WHITE = "/com/github/torikulhabib/nino/css/style_white.css";
         public abstract const string URL_CSS_DARK = "/com/github/torikulhabib/nino/css/style_dark.css";
         public abstract const string URL_CSS_PINK = "/com/github/torikulhabib/nino/css/style_pink.css";
@@ -45,9 +33,7 @@ namespace nino {
         public abstract const string URL_CSS_COCO = "/com/github/torikulhabib/nino/css/style_coco.css";
         public abstract const string URL_CSS_GRADIENT_BLUE_GREEN = "/com/github/torikulhabib/nino/css/style_gradient_blue_green.css";
         public abstract const string URL_CSS_GRADIENT_PURPLE_RED = "/com/github/torikulhabib/nino/css/style_gradient_purple_red.css";
-        public abstract const string URL_CSS_PRIDE = "/com/github/torikulhabib/nino/css/style_gradient_pride.css";
-        public abstract const string URL_CSS_LIGHT_TRANS = "/com/github/torikulhabib/nino/css/style_light_transparent.css";
-        public abstract const string URL_CSS_DARK_TRANS = "/com/github/torikulhabib/nino/css/style_dark_transparent.css";
+        public abstract const string URL_CSS_RAINBOW = "/com/github/torikulhabib/nino/css/style_gradient_rainbow.css";
         public abstract const string URL_CSS_GRADIENT_RED_PINK = "/com/github/torikulhabib/nino/css/style_gradient_red_pink.css";
         public abstract const string URL_CSS_GRADIENT_ORANGE_YELLOW = "/com/github/torikulhabib/nino/css/style_gradient_orange_yellow.css";
     }
