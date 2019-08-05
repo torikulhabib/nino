@@ -70,6 +70,7 @@ parts:
         - libxcb-shm0-dev
         - libxcb1-dev
         - libxkbcommon-dev
+        - libgtop-2.0-11
   granite:
     plugin: meson
     meson-parameters:
