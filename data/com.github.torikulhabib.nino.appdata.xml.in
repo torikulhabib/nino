@@ -20,10 +20,11 @@
     <p></p>
   </description>
   ​<releases>
-    <release version="1.3.0" date="2019-08-03">
+    <release version="1.3.1" date="2019-08-05">
       <description>
         <p>Fix and add feature</p>
         <ul>
+          <li>New icon by fatih20.</li>
           <li>Click through when inactive.</li>
           <li>Color.</li>
           <li>Fix.</li>
