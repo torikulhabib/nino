@@ -7,60 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.torikulhabib.nino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-17 10:36+0700\n"
+"POT-Creation-Date: 2019-08-07 11:08+0200\n"
 "PO-Revision-Date: 2019-01-19 21:07+0100\n"
 "Last-Translator: NathanBnm\n"
-"Language-Team: Français\n"
+"Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.github.torikulhabib.nino.appdata.xml.in:7
-#: data/com.github.torikulhabib.nino.desktop.in.in:3
-msgid "Nino"
-msgstr "Nino"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:8
-#: data/com.github.torikulhabib.nino.desktop.in.in:4
-msgid "A network monitor widget"
-msgstr "Un widget de moniteur réseau"
-
-#: data/com.github.torikulhabib.nino.desktop.in.in:5
-msgid "Network Monitor"
-msgstr "Moniteur réseau"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "An internet speed monitor apps."
-msgstr "Une application de surveillance de la vitesse d'Internet."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:11
-msgid "Features:"
-msgstr "Fonctionnalités :"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:13
-msgid "Small window application features"
-msgstr "Toutes les fonctionnalités de l'application dans une petite fenêtre"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:14
-msgid "Alert when no internet connection is connected."
-msgstr "Soyez alerté lorsqu'aucune connexion Internet n'est établie."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:15
-msgid "Many color theme choices available."
-msgstr "Plusieurs choix de couleurs de thème disponibles."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:16
-msgid "Lock position on the desktop."
-msgstr "Verrouillez la position sur le bureau."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:17
-msgid "Save the position of the widget."
-msgstr "Enregistrez la position du widget."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:18
-msgid "The choice is always above the screen or below."
-msgstr "Le choix est toujours au-dessus de l'écran ou en dessous."
+#: src/StringPot.vala:22
+msgid "UPNDOWN"
+msgstr "Transfert/Téléchargement"
 
 #: src/StringPot.vala:23
 msgid "Upload"
@@ -72,35 +30,35 @@ msgstr "Téléchargement"
 
 #: src/StringPot.vala:25
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: src/StringPot.vala:26
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #: src/StringPot.vala:27
 msgid "Main Window"
-msgstr ""
+msgstr "Fenêtre principale"
 
 #: src/StringPot.vala:28
 msgid "Mini Window"
-msgstr "Petite fenêtre"
+msgstr "Mini fenêtre"
 
 #: src/StringPot.vala:29
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: src/StringPot.vala:30
 msgid "Dual"
-msgstr ""
+msgstr "Double"
 
 #: src/StringPot.vala:31
 msgid "Lock"
-msgstr ""
+msgstr "Verrouiller"
 
 #: src/StringPot.vala:32
 msgid "Unlock"
-msgstr ""
+msgstr "Déverrouiller"
 
 #: src/StringPot.vala:33
 msgid "Upload Speed"
@@ -120,19 +78,19 @@ msgstr "Bureau"
 
 #: src/StringPot.vala:37
 msgid "Above"
-msgstr ""
+msgstr "Premier-plan"
 
 #: src/StringPot.vala:38
 msgid "Below"
-msgstr ""
+msgstr "Arrière-plan"
 
 #: src/StringPot.vala:39
 msgid "Connect to the Internet to monitor network."
-msgstr "Connectez-vous à Internet pour surveiller le réseau."
+msgstr "Connectez-vous à Internet pour suivre le réseau."
 
 #: src/StringPot.vala:40
 msgid "Network Settings…"
-msgstr ""
+msgstr "Paramètres Réseau…"
 
 #: src/StringPot.vala:41
 msgid "White"
@@ -148,7 +106,7 @@ msgstr "Rouge"
 
 #: src/StringPot.vala:44
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #: src/StringPot.vala:45
 msgid "Orange"
@@ -180,24 +138,24 @@ msgstr "Coco"
 
 #: src/StringPot.vala:52
 msgid "Blue to Green"
-msgstr "De bleu à vert"
+msgstr "Dégradé bleu-vert"
 
 #: src/StringPot.vala:53
 msgid "Purple to Red"
-msgstr "De violet à rouge"
+msgstr "Dégradé violet-rouge"
 
 #: src/StringPot.vala:54
-msgid "Pride"
-msgstr "Multicolore"
+msgid "Rainbow"
+msgstr "Arc-en-ciel"
 
 #: src/StringPot.vala:55
-msgid "Red to Pink"
-msgstr ""
+msgid "Orange to Yellow"
+msgstr "Dégradé orange-jaune"
 
 #: src/StringPot.vala:56
-msgid "Orange to Yellow"
-msgstr ""
+msgid "Red to Pink"
+msgstr "Dégradé rouge-rose"
 
 #: src/StringPot.vala:57
 msgid "Select a theme color"
-msgstr "Séléctionnez une couleur de thème"
+msgstr "Sélectionnez un thème de couleur"

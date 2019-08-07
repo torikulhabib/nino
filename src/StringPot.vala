@@ -51,7 +51,7 @@
         public abstract const string Coco                     = _("Coco");
         public abstract const string BlueToGreen              = _("Blue to Green");
         public abstract const string PurpleToRed              = _("Purple to Red");
-        public abstract const string Rainbow                    = _("Rainbow");
+        public abstract const string Rainbow                  = _("Rainbow");
         public abstract const string OrangeToYellow           = _("Orange to Yellow");
         public abstract const string RedToPink                = _("Red to Pink");
         public abstract const string SelectColor              = _("Select a theme color");

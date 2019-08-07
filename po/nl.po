@@ -1,75 +1,29 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Dutch translations for com.github.torikulhabib.nino package.
+# Copyright (C) 2019 THE com.github.torikulhabib.nino'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.torikulhabib.nino package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Heimen Stoffels <vistausss@outlook.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.torikulhabib.nino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-17 10:36+0700\n"
+"POT-Creation-Date: 2019-08-07 11:01+0200\n"
 "PO-Revision-Date: 2019-03-17 17:33+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.1.1\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl_NL\n"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:7
-#: data/com.github.torikulhabib.nino.desktop.in.in:3
-msgid "Nino"
-msgstr "Nino"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:8
-#: data/com.github.torikulhabib.nino.desktop.in.in:4
-msgid "A network monitor widget"
-msgstr "Een widget voor het monitoren van netwerkverkeer"
-
-#: data/com.github.torikulhabib.nino.desktop.in.in:5
-msgid "Network Monitor"
-msgstr "Netwerkmonitor"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:10
-msgid "An internet speed monitor apps."
-msgstr "Een app voor het monitoren van de internetsnelheid."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:11
-msgid "Features:"
-msgstr "Mogelijkheden:"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:13
-msgid "Small window application features"
-msgstr "Mogelijkheden in klein venster"
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:14
-msgid "Alert when no internet connection is connected."
-msgstr "Melding als er geen internetverbinding is."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:15
-msgid "Many color theme choices available."
-msgstr "Vele kleurenschema's beschikbaar."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:16
-msgid "Lock position on the desktop."
-msgstr "Positie vergrendelen op het bureaublad."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:17
-msgid "Save the position of the widget."
-msgstr "Widgetpositie opslaan."
-
-#: data/com.github.torikulhabib.nino.appdata.xml.in:18
-msgid "The choice is always above the screen or below."
-msgstr "De keuze is altijd erboven of eronder."
 
 #: src/StringPot.vala:22
-msgid "UPNDOWND"
+msgid "UPNDOWN"
 msgstr ""
 
 #: src/StringPot.vala:23
-msgid "Upload"
+msgid "Upload"ASCII
 msgstr "Upload"
 
 #: src/StringPot.vala:24
@@ -117,7 +71,8 @@ msgid "Download Speed"
 msgstr "Downloadsnelheid"
 
 #: src/StringPot.vala:35
-msgid "Network Is Not Available"
+#, fuzzy
+msgid "Network is not available"
 msgstr "Geen netwerkverbinding"
 
 #: src/StringPot.vala:36
@@ -133,7 +88,8 @@ msgid "Below"
 msgstr ""
 
 #: src/StringPot.vala:39
-msgid "Connect to the Internet to Monitoring Network."
+#, fuzzy
+msgid "Connect to the Internet to monitor network."
 msgstr "Maak verbinding met het internet om het te monitoren."
 
 #: src/StringPot.vala:40
@@ -193,15 +149,15 @@ msgid "Purple to Red"
 msgstr "Paars met rood"
 
 #: src/StringPot.vala:54
-msgid "Pride"
-msgstr "Trots"
+msgid "Rainbow"
+msgstr ""
 
 #: src/StringPot.vala:55
-msgid "Red to Pink"
+msgid "Orange to Yellow"
 msgstr ""
 
 #: src/StringPot.vala:56
-msgid "Orange to Yellow"
+msgid "Red to Pink"
 msgstr ""
 
 #: src/StringPot.vala:57

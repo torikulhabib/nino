@@ -1,0 +1,136 @@
+# Indonesian translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-07 11:16+0200\n"
+"PO-Revision-Date: 2019-08-07 11:01+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:7
+#: data/com.github.torikulhabib.nino.desktop.in:4
+msgid "Nino"
+msgstr "Nino"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:8
+msgid "A Widgets network monitor"
+msgstr "Sebuah Wijet jaringan Monitor"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:10
+#, fuzzy
+msgid "An internet speed monitor"
+msgstr "Monitor kecepatan sebuah internet "
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:11
+msgid "Features:"
+msgstr "Fitur"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:13
+#, fuzzy
+msgid "Small window application features."
+msgstr "Aplikasi kecil"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:14
+msgid "Alert when no internet connection is connected."
+msgstr "Ingatkan bila tidak ada sambungan internet yang terhubung."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:15
+msgid "Many color theme choices available."
+msgstr "Banyak warna tema yang tersedia. "
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:16
+msgid "Lock position on the desktop."
+msgstr "Kunci Posisi pada layar"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:17
+msgid "Save the position of the widget."
+msgstr "Simpan posisi wijet"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:18
+msgid "The choice is always above the screen or below."
+msgstr "Pilihan selalu diatas atau dibawah"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:25
+#: data/com.github.torikulhabib.nino.appdata.xml.in:38
+msgid "Fix and add feature"
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:27
+msgid "New icon by fatih20."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:28
+msgid "Click through when inactive."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:29
+msgid "Color."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:30
+msgid "Fix."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:31
+msgid "Thanks ryonakano for fix code."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:32
+msgid "Updated Dutch translation by Heimen Stoffels."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:40
+msgid "Change switch to button."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:41
+#, fuzzy
+msgid "Add Lock position miniwindow."
+msgstr "Kunci Posisi pada layar"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:42
+msgid "Add close on miniwindow."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:43
+#, fuzzy
+msgid "Fix lock position widget."
+msgstr "Simpan posisi wijet"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:44
+msgid "Only Miniwindow and Close Widget."
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:50
+msgid "Hello Juno!"
+msgstr ""
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:106
+msgid "Torikul Habib"
+msgstr "Torikul Habib"
+
+#: data/com.github.torikulhabib.nino.desktop.in:5
+#, fuzzy
+msgid "A network monitor widget."
+msgstr "Sebuah Wijet jaringan Monitor"
+
+#: data/com.github.torikulhabib.nino.desktop.in:6
+msgid "Network Monitor"
+msgstr "Jaringan Monitor"
+
+#: data/com.github.torikulhabib.nino.desktop.in:8
+msgid "com.github.torikulhabib.nino"
+msgstr "com.github.torikulhabib.nino"
+
+#: data/com.github.torikulhabib.nino.desktop.in:11
+msgid "Network;"
+msgstr ""
