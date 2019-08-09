@@ -21,7 +21,7 @@ parts:
     source: https://github.com/torikulhabib/nino.git
     override-build: |
         snapcraftctl build
-        sed -i -E 's|^(Icon[^=]*)=.*|\1=/usr/share/icons/hicolor/256x256/apps/com.github.torikulhabib.nino.svg|' ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/com.github.torikulhabib.nino.desktop
+        sed -i -E 's|^(Icon[^=]*)=.*|\1=/usr/share/icons/hicolor/128x128/apps/com.github.torikulhabib.nino.svg|' ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/com.github.torikulhabib.nino.desktop
     build-packages:
         - libgirepository1.0-dev
         - valac
