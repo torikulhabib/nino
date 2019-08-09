@@ -23,7 +23,7 @@ msgid "UPNDOWN"
 msgstr ""
 
 #: src/StringPot.vala:23
-msgid "Upload"ASCII
+msgid "Upload"
 msgstr "Upload"
 
 #: src/StringPot.vala:24
