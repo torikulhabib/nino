@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-07 11:16+0200\n"
-"PO-Revision-Date: 2019-08-07 11:01+0200\n"
+"PO-Revision-Date: 2019-11-09 14:12+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:7
 #: data/com.github.torikulhabib.nino.desktop.in:4
@@ -23,23 +24,20 @@ msgid "Nino"
 msgstr "Nino"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:8
-#, fuzzy
 msgid "A Widgets network monitor"
 msgstr "Een widget voor het monitoren van netwerkverkeer"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:10
-#, fuzzy
 msgid "An internet speed monitor"
-msgstr "Een app voor het monitoren van de internetsnelheid."
+msgstr "Een app voor het monitoren van de internetsnelheid"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:11
 msgid "Features:"
 msgstr "Mogelijkheden:"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:13
-#, fuzzy
 msgid "Small window application features."
-msgstr "Mogelijkheden in klein venster"
+msgstr "Mogelijkheden in minivenster."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:14
 msgid "Alert when no internet connection is connected."
@@ -64,66 +62,63 @@ msgstr "De keuze is altijd erboven of eronder."
 #: data/com.github.torikulhabib.nino.appdata.xml.in:25
 #: data/com.github.torikulhabib.nino.appdata.xml.in:38
 msgid "Fix and add feature"
-msgstr ""
+msgstr "Mogelijkheid toegevoegd en foutoplossingen"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:27
 msgid "New icon by fatih20."
-msgstr ""
+msgstr "Nieuw pictogram, met dank aan @Fatih20"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:28
 msgid "Click through when inactive."
-msgstr ""
+msgstr "Venster is doorklikbaar bij inactiviteit"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:29
 msgid "Color."
-msgstr ""
+msgstr "Kleur"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:30
 msgid "Fix."
-msgstr ""
+msgstr "Foutoplossing"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:31
 msgid "Thanks ryonakano for fix code."
-msgstr ""
+msgstr "Met dank aan ryonakano"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:32
 msgid "Updated Dutch translation by Heimen Stoffels."
-msgstr ""
+msgstr "Bijgewerkte Nederlandse vertaling, met dank aan Heimen Stoffels"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:40
 msgid "Change switch to button."
-msgstr ""
+msgstr "Schakelaar gewijzigd in knop"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:41
-#, fuzzy
 msgid "Add Lock position miniwindow."
-msgstr "Positie vergrendelen op het bureaublad."
+msgstr "Positie vergrendelen van het minivenster"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:42
 msgid "Add close on miniwindow."
-msgstr ""
+msgstr "Sluitknop op het minivenster"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:43
-#, fuzzy
 msgid "Fix lock position widget."
-msgstr "Widgetpositie opslaan."
+msgstr "Widgetpositie vergrendelen opgelost"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:44
 msgid "Only Miniwindow and Close Widget."
-msgstr ""
+msgstr "Alleen minivenster en sluitwidget"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:50
 msgid "Hello Juno!"
-msgstr ""
+msgstr "Hallo, Juno!"
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:106
 msgid "Torikul Habib"
-msgstr ""
+msgstr "Torikul Habib"
 
 #: data/com.github.torikulhabib.nino.desktop.in:5
-#, fuzzy
 msgid "A network monitor widget."
-msgstr "Een widget voor het monitoren van netwerkverkeer"
+msgstr "Een widget voor het monitoren van netwerkverkeer."
 
 #: data/com.github.torikulhabib.nino.desktop.in:6
 msgid "Network Monitor"
@@ -131,12 +126,11 @@ msgstr "Netwerkmonitor"
 
 #: data/com.github.torikulhabib.nino.desktop.in:8
 msgid "com.github.torikulhabib.nino"
-msgstr ""
+msgstr "com.github.torikulhabib.nino"
 
 #: data/com.github.torikulhabib.nino.desktop.in:11
-#, fuzzy
 msgid "Network;"
-msgstr "Netwerkmonitor"
+msgstr "Netwerk;"
 
 #~ msgid "Pride"
 #~ msgstr "Trots"
