@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.torikulhabib.nino\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-07 11:01+0200\n"
-"PO-Revision-Date: 2019-03-17 17:33+0100\n"
+"POT-Creation-Date: 2019-08-07 11:08+0200\n"
+"PO-Revision-Date: 2019-11-09 14:09+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/StringPot.vala:22
 msgid "UPNDOWN"
-msgstr ""
+msgstr "UPNDOWN"
 
 #: src/StringPot.vala:23
 msgid "Upload"
@@ -36,31 +36,31 @@ msgstr "Sluiten"
 
 #: src/StringPot.vala:26
 msgid "Color"
-msgstr ""
+msgstr "Kleur"
 
 #: src/StringPot.vala:27
 msgid "Main Window"
-msgstr ""
+msgstr "Hoofdvenster"
 
 #: src/StringPot.vala:28
 msgid "Mini Window"
-msgstr "Mini-venster"
+msgstr "Minivenster"
 
 #: src/StringPot.vala:29
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 #: src/StringPot.vala:30
 msgid "Dual"
-msgstr ""
+msgstr "Duaal"
 
 #: src/StringPot.vala:31
 msgid "Lock"
-msgstr ""
+msgstr "Vergrendelen"
 
 #: src/StringPot.vala:32
 msgid "Unlock"
-msgstr ""
+msgstr "Ontgrendelen"
 
 #: src/StringPot.vala:33
 msgid "Upload Speed"
@@ -71,7 +71,6 @@ msgid "Download Speed"
 msgstr "Downloadsnelheid"
 
 #: src/StringPot.vala:35
-#, fuzzy
 msgid "Network is not available"
 msgstr "Geen netwerkverbinding"
 
@@ -81,14 +80,13 @@ msgstr "Bureaublad"
 
 #: src/StringPot.vala:37
 msgid "Above"
-msgstr ""
+msgstr "Erboven"
 
 #: src/StringPot.vala:38
 msgid "Below"
-msgstr ""
+msgstr "Eronder"
 
 #: src/StringPot.vala:39
-#, fuzzy
 msgid "Connect to the Internet to monitor network."
 msgstr "Maak verbinding met het internet om het te monitoren."
 
@@ -150,15 +148,15 @@ msgstr "Paars met rood"
 
 #: src/StringPot.vala:54
 msgid "Rainbow"
-msgstr ""
+msgstr "Regenboog"
 
 #: src/StringPot.vala:55
 msgid "Orange to Yellow"
-msgstr ""
+msgstr "Oranje met geel"
 
 #: src/StringPot.vala:56
 msgid "Red to Pink"
-msgstr ""
+msgstr "Rood met roze"
 
 #: src/StringPot.vala:57
 msgid "Select a theme color"
