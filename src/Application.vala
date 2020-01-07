@@ -62,9 +62,8 @@ namespace nino {
             }
 
             var color = settings.get_string ("color");
-            string css = color;
             var css_provider = new Gtk.CssProvider ();
-            var css_path = Color.string_to_css_path (css);
+            var css_path = Color.string_to_css_path (color);
             css_provider.load_from_resource (css_path);
             Gtk.StyleContext.add_provider_for_screen (
                     Gdk.Screen.get_default (), 
