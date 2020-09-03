@@ -53,7 +53,7 @@ msgstr "Trancar a posição no ambiente de trabalho."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:17
 msgid "Save the position of the widget."
-msgstr "Gravar a posição do widget."
+msgstr "Guardar a posição do widget."
 
 #: data/com.github.torikulhabib.nino.appdata.xml.in:18
 msgid "The choice is always above the screen or below."
