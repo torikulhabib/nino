@@ -39,15 +39,15 @@ public abstract class nino.Window : Gtk.Window {
         settings = nino.Configs.Settings.get_settings ();
         net = new Net ();
         network_total_label = new Gtk.Label (StringPot.UpDown);
-        network_total_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        network_total_label.get_style_context ().add_class ("h3");
         network_total_label.hexpand = true;
 
         network_up_label = new Gtk.Label (StringPot.Upload);
-        network_up_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        network_up_label.get_style_context ().add_class ("h3");
         network_up_label.hexpand = true;
 
         network_down_label = new Gtk.Label (StringPot.Download);
-        network_down_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        network_down_label.get_style_context ().add_class ("h3");
         network_down_label.hexpand = true;
 
         icon_down_total = new Gtk.Image.from_icon_name ("go-down-symbolic", Gtk.IconSize.MENU);

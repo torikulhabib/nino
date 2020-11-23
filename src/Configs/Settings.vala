@@ -37,7 +37,7 @@ namespace nino.Configs {
         TOTAL = 1
     }
 
-    public class Settings : Granite.Services.Settings {
+    public class Settings : Services.Settings {
         private static Settings? settings;
         public int dialog_x { get; set; }
         public int dialog_y { get; set; }

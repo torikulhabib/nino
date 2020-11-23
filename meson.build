@@ -36,7 +36,6 @@ executable(
     as_resource,
     dependencies: [
         dependency('gio-unix-2.0'),
-        dependency('granite'),
         dependency('libgtop-2.0'),
         dependency('gtk+-3.0'),
     ],

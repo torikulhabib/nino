@@ -9,5 +9,6 @@ sources = files(
     'Widgets/Preferences.vala',
     'Enums/Color.vala',
     'Configs/Constants.vala',
-    'Configs/Settings.vala'
+    'Configs/Settings.vala',
+    'Configs/SettingsDconf.vala'
 )

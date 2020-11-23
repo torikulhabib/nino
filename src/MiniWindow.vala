@@ -156,7 +156,7 @@ public class nino.MiniWindow : Window {
                 mini_lock_button.image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
                 mini_lock_button.tooltip_text = StringPot.Lock;
                 stick ();
-                type_hint = Gdk.WindowTypeHint.SPLASHSCREEN;
+                type_hint = Gdk.WindowTypeHint.TOOLTIP;
                 break;
             case nino.Configs.MiniLockMode.UNLOCK :
                 mini_lock_button.image = new Gtk.Image.from_icon_name ("changes-allow-symbolic", Gtk.IconSize.BUTTON);

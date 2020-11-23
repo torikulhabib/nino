@@ -20,7 +20,7 @@
 */
 
 namespace nino {
-    public class NinoApp : Granite.Application {
+    public class NinoApp : Gtk.Application {
         public static GLib.Settings settings;
         private MainWindow mainwindow;
         private MiniWindow miniwindow;

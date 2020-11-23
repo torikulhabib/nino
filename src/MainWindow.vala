@@ -176,7 +176,7 @@ public class nino.MainWindow : Window {
     protected override Gtk.Grid no_network_conection () {
         var title_label = new Gtk.Label (StringPot.NetworkNotAvailable);
         title_label.hexpand = true;
-        title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        title_label.get_style_context ().add_class ("h2");
         title_label.max_width_chars = 40;
         title_label.wrap = true;
         title_label.wrap_mode = Pango.WrapMode.WORD_CHAR;
