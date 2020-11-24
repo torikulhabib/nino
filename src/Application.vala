@@ -40,7 +40,7 @@ namespace nino {
                 }
             });
             add_action (quit_action);
-            set_accels_for_action ("app.quit", {"<Ctrl>Q"});
+            set_accels_for_action ("app.quit", {"Q"});
         }
 
         static construct {
@@ -48,28 +48,15 @@ namespace nino {
         }
 
         protected override void activate () {
-            if (get_windows ().length () > 0) {
-                get_windows ().data.present ();
-                return;
+            if (mainwindow == null && miniwindow == null) {
+                if (settings.get_enum ("window-mode") == 0) {
+                    mainwindow = new MainWindow (this);
+                    mainwindow.show_all ();
+                } else {
+                    miniwindow = new MiniWindow (this);
+                    miniwindow.show_all ();
+                }
             }
-
-            if (settings.get_enum ("window-mode") == 0) {
-                mainwindow = new MainWindow (this);
-                mainwindow.show_all ();
-            } else {
-                miniwindow = new MiniWindow (this);
-                miniwindow.show_all ();
-            }
-
-            var color = settings.get_string ("color");
-            var css_provider = new Gtk.CssProvider ();
-            var css_path = Color.string_to_css_path (color);
-            css_provider.load_from_resource (css_path);
-            Gtk.StyleContext.add_provider_for_screen (
-                    Gdk.Screen.get_default (), 
-                    css_provider, 
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
         }
 
         public static int main (string[] args) {

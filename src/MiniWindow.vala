@@ -21,10 +21,8 @@
 
 public class nino.MiniWindow : Window {
     private Gtk.Button mini_lock_button;
-    private Gtk.Button net_view_button;
     private Gtk.Revealer main_revealer;
     private Gtk.Revealer lock_revealer;
-    private Gtk.Revealer network_view;
     private Gtk.Revealer updown_revealer;
     private Gtk.Stack stack;
 
@@ -43,28 +41,17 @@ public class nino.MiniWindow : Window {
             update_data ();
             return true;
         });
-        Timeout.add (50, () => {
-            net_view_widget_symbol ();
-            set_mini_lock_symbol ();
-            return false;
-        });
-
         set_keep_above (true);
         set_keep_below (false);
         main_revealer = new Gtk.Revealer ();
         main_revealer.add (main_button_wodget ());
-        main_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
+        main_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
 
         lock_revealer = new Gtk.Revealer ();
         lock_revealer.add (mini_lock_button_widget ());
         lock_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
 
-        network_view = new Gtk.Revealer ();
-        network_view.add (net_view_widget ());
-        network_view.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
-
         headerbar.pack_start (main_revealer);
-        headerbar.pack_end (network_view);
         headerbar.pack_end (lock_revealer);
 
         update_position (settings.dialog_x, settings.dialog_y);
@@ -72,21 +59,20 @@ public class nino.MiniWindow : Window {
         NinoApp.settings.changed["window-out-of-focus-translucid"].connect (configure_window_opacity_on_focus_loss);
         configure_window_opacity_on_focus_loss ();
         event.connect (listen_to_window_events);
+        net_view_widget_symbol ();
+        set_mini_lock_symbol ();
+        close_button_revealer.set_reveal_child (false);
     }
 
     private bool listen_to_window_events (Gdk.Event event) {
-            if (is_active) {
-                close_button_revealer.set_reveal_child (true);
-                network_view.set_reveal_child (true);
-                lock_revealer.set_reveal_child (true);
-                main_revealer.set_reveal_child (true);
-            } else {
-                close_button_revealer.set_reveal_child (false);
-                network_view.set_reveal_child (false);
-                main_revealer.set_reveal_child (false);
-                lock_revealer.set_reveal_child (false);
-            }
-            mask_input ();
+        if (is_active) {
+            lock_revealer.set_reveal_child (true);
+            main_revealer.set_reveal_child (true);
+        } else {
+            main_revealer.set_reveal_child (false);
+            lock_revealer.set_reveal_child (false);
+        }
+        mask_input ();
         return false;
     }
 
@@ -111,17 +97,6 @@ public class nino.MiniWindow : Window {
         });
         set_mini_lock_symbol ();
         return mini_lock_button;
-    }
-
-    private Gtk.Widget net_view_widget () {
-        net_view_button = new Gtk.Button ();
-        net_view_button.can_focus = false;
-        net_view_button.clicked.connect (() => {
-            settings.net_switch ();
-            net_view_widget_symbol ();
-        });
-        net_view_widget_symbol ();
-        return net_view_button;
     }
 
     private void configure_window_opacity_on_focus_loss () {
@@ -166,25 +141,18 @@ public class nino.MiniWindow : Window {
                 break;
         }
     }
-
     private void net_view_widget_symbol () {
         switch (settings.net_view) {
             case nino.Configs.NetView.DUAL :
-                net_view_button.image = new Gtk.Image.from_icon_name ("zoom-out-symbolic", Gtk.IconSize.BUTTON);
-                net_view_button.tooltip_text = ("Dual");
                 stack.visible_child_name = "updown";
                 updown_revealer.set_reveal_child (true);
                 break;
             case nino.Configs.NetView.TOTAL :
-                net_view_button.image = new Gtk.Image.from_icon_name ("zoom-in-symbolic", Gtk.IconSize.BUTTON);
-                net_view_button.tooltip_text = ("Total");
                 stack.visible_child_name = "total";
                 updown_revealer.set_reveal_child (false);
                 break;
         }
     }
-
-
     public override bool configure_event (Gdk.EventConfigure event) {
         int root_x, root_y;
         get_position (out root_x, out root_y);
@@ -263,7 +231,13 @@ public class nino.MiniWindow : Window {
         main_grid.valign = Gtk.Align.CENTER;
         main_grid.column_homogeneous = true;
         main_grid.add (stack);
-
+        button_press_event.connect ((event) => {
+            if (event.button == Gdk.BUTTON_PRIMARY && event.type == Gdk.EventType.2BUTTON_PRESS) {
+                settings.net_switch ();
+                net_view_widget_symbol ();
+            }
+            return Gdk.EVENT_PROPAGATE;
+        });
         return main_grid;
     }
 

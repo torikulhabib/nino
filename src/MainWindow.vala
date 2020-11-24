@@ -38,11 +38,6 @@ public class nino.MainWindow : Window {
             update_data ();
             return true;
         });
-        Timeout.add (50, () => {
-            set_lock_symbol ();
-            set_keep_symbol ();
-            return false;
-        });
         headerbar.pack_start (lock_button_widget ());
         headerbar.pack_start (mini_button_widget ());
         headerbar.pack_end (menu_button_widget ());
@@ -50,6 +45,8 @@ public class nino.MainWindow : Window {
         close_button_revealer.set_reveal_child (true);
         update_position (settings.window_x, settings.window_y);
         show_all ();
+        set_lock_symbol ();
+        set_keep_symbol ();
     }
 
     private Gtk.Widget lock_button_widget () {

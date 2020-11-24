@@ -37,6 +37,7 @@ public abstract class nino.Window : Gtk.Window {
 
     construct {
         settings = nino.Configs.Settings.get_settings ();
+        change_color (settings.color);
         net = new Net ();
         network_total_label = new Gtk.Label (StringPot.UpDown);
         network_total_label.get_style_context ().add_class ("h3");
@@ -71,7 +72,7 @@ public abstract class nino.Window : Gtk.Window {
 
         close_button_revealer = new Gtk.Revealer ();
         close_button_revealer.add (close_button_widget ());
-        close_button_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
+        close_button_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
 
         headerbar = new Gtk.HeaderBar ();
         headerbar.has_subtitle = false;
