@@ -56,8 +56,6 @@ public class nino.MiniWindow : Window {
 
         update_position (settings.dialog_x, settings.dialog_y);
         show_all ();
-        NinoApp.settings.changed["window-out-of-focus-translucid"].connect (configure_window_opacity_on_focus_loss);
-        configure_window_opacity_on_focus_loss ();
         event.connect (listen_to_window_events);
         net_view_widget_symbol ();
         set_mini_lock_symbol ();
@@ -68,9 +66,11 @@ public class nino.MiniWindow : Window {
         if (is_active) {
             lock_revealer.set_reveal_child (true);
             main_revealer.set_reveal_child (true);
+            get_style_context ().remove_class ("translucid-backdrop");
         } else {
             main_revealer.set_reveal_child (false);
             lock_revealer.set_reveal_child (false);
+            get_style_context ().add_class ("translucid-backdrop");
         }
         mask_input ();
         return false;
@@ -98,15 +98,6 @@ public class nino.MiniWindow : Window {
         set_mini_lock_symbol ();
         return mini_lock_button;
     }
-
-    private void configure_window_opacity_on_focus_loss () {
-        if (NinoApp.settings.get_boolean ("window-out-of-focus-translucid")) {
-            get_style_context ().add_class ("translucid-backdrop");
-        } else {
-            get_style_context ().remove_class ("translucid-backdrop");
-        }
-    }
-
     private Gtk.Widget main_button_wodget () {
         var main_button = new Gtk.Button.from_icon_name ("window-new-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         main_button.tooltip_text = StringPot.MainWindow;
