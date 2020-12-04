@@ -258,7 +258,7 @@ namespace nino.Services {
                     set_property (prop.name, schema.get_enum (key));
             } else if (type.is_a (typeof (SettingsSerializable))) {
                 get_property (key, ref val);
-                (val.get_object () as SettingsSerializable).settings_deserialize (schema.get_string (key));
+                ((SettingsSerializable)val.get_object ()).settings_deserialize (schema.get_string (key));
                 notify.connect (handle_notify);
                 return;
             } else {
@@ -340,7 +340,7 @@ namespace nino.Services {
                     }
                 }
             } else if (type.is_a (typeof (SettingsSerializable))) {
-                success = schema.set_string (key, (val.get_object () as SettingsSerializable).settings_serialize ());
+                success = schema.set_string (key, ((SettingsSerializable)val.get_object ()).settings_serialize ());
             } else {
                 debug (
                     "Unsupported settings type '%s' for key '%s' in schema '%s'",

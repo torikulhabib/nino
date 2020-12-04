@@ -30,6 +30,10 @@
 .nino:backdrop.translucid-backdrop .titlebar {
     color: @textColorPrimary;
     background: rgba(0, 0, 0, 0);
+    box-shadow:
+        inset 1px 0 0 0 alpha (shade (@colorPrimary, 1.4), 0.6),
+        inset -1px 0 0 0 alpha (shade (@colorPrimary, 1.4), 0.6),
+        inset 0 -1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.8);
 }
 
 .nino:backdrop.translucid-backdrop .net_color {
@@ -50,6 +54,10 @@
     rgba (67, 93, 182, 0.7)   86.68%, 
     rgba (104, 0, 139, 0.7)   86.68%, 
     rgba (104, 0, 139, 0.7)   );
+    box-shadow:
+        inset 1px 0 0 0 alpha (shade (@colorPrimary, 1.4), 0.6),
+        inset -1px 0 0 0 alpha (shade (@colorPrimary, 1.4), 0.6),
+        inset 0 -1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.8);
 }
 
 .nino,
