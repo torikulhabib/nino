@@ -86,6 +86,7 @@ apps:
   nino:
     command: desktop-launch $SNAP/usr/bin/com.github.torikulhabib.nino
     desktop: usr/share/applications/com.github.torikulhabib.nino.desktop
+    extensions: [gnome-3-28]
     plugs:
       - desktop
       - desktop-legacy
