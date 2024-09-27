@@ -1,0 +1,133 @@
+# Portuguese (Portugal) translations for com.github.torikulhabib.nino package.
+# Copyright (C) 2019 THE com.github.torikulhabib.nino'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.torikulhabib.nino package.
+# André Barata <andretiagob@protonmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-07 11:16+0200\n"
+"PO-Revision-Date: 2020-09-02 11:53+0100\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:7
+#: data/com.github.torikulhabib.nino.desktop.in:4
+msgid "Nino"
+msgstr "Nino"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:8
+msgid "A Widgets network monitor"
+msgstr "Um Widget para monitorizar redes"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:10
+msgid "An internet speed monitor"
+msgstr "Um monitor de velocidade de Internet"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:11
+msgid "Features:"
+msgstr "Funcionalidades:"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:13
+msgid "Small window application features."
+msgstr "Funcionalidades da janela da aplicação pequena."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:14
+msgid "Alert when no internet connection is connected."
+msgstr "Alerta quando não existir uma conexão à Internet."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:15
+msgid "Many color theme choices available."
+msgstr "Várias escolhas de cores disponíveis para o tema."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:16
+msgid "Lock position on the desktop."
+msgstr "Trancar a posição no ambiente de trabalho."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:17
+msgid "Save the position of the widget."
+msgstr "Guardar a posição do widget."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:18
+msgid "The choice is always above the screen or below."
+msgstr "A escolha é sempre acima ou abaixo do ecrã."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:25
+#: data/com.github.torikulhabib.nino.appdata.xml.in:38
+msgid "Fix and add feature"
+msgstr "Correções e funcionalidades adicionadas"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:27
+msgid "New icon by fatih20."
+msgstr "Ícone novo por fatih20."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:28
+msgid "Click through when inactive."
+msgstr "Clicar quando o widget estiver inativo."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:29
+msgid "Color."
+msgstr "Cor."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:30
+msgid "Fix."
+msgstr "Correções."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:31
+msgid "Thanks ryonakano for fix code."
+msgstr "Obrigado a ryonakano por correções de código."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:32
+msgid "Updated Dutch translation by Heimen Stoffels."
+msgstr "Tradução Holandesa atualizada por Heimen Stoffels."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:40
+msgid "Change switch to button."
+msgstr "Alteração de interruptor para botão."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:41
+msgid "Add Lock position miniwindow."
+msgstr "Posição da Tranca na mini janela adicionada."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:42
+msgid "Add close on miniwindow."
+msgstr "Fechar a mini janela adicionado."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:43
+msgid "Fix lock position widget."
+msgstr "Correção da posição da tranca do widget."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:44
+msgid "Only Miniwindow and Close Widget."
+msgstr "Apenas na Mini >Janela e no Fechar do Widget."
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:50
+msgid "Hello Juno!"
+msgstr "Olá Juno!"
+
+#: data/com.github.torikulhabib.nino.appdata.xml.in:106
+msgid "Torikul Habib"
+msgstr "Torikul Habib"
+
+#: data/com.github.torikulhabib.nino.desktop.in:5
+msgid "A network monitor widget."
+msgstr "Um widget para monitorizar uma redes."
+
+#: data/com.github.torikulhabib.nino.desktop.in:6
+msgid "Network Monitor"
+msgstr "Monitor de Rede"
+
+#: data/com.github.torikulhabib.nino.desktop.in:8
+msgid "com.github.torikulhabib.nino"
+msgstr "com.github.torikulhabib.nino"
+
+#: data/com.github.torikulhabib.nino.desktop.in:11
+msgid "Network;"
+msgstr "Network;Rede;"
